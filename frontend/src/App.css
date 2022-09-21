@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+    background-color: #000000;
+}
+body {
+    background-color: #000000;
+}

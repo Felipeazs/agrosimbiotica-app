@@ -1,0 +1,12 @@
+{
+	"name": "Agrosimbiotica",
+	"version": "1.0.0",
+	"description": "agrosimbiotica app",
+	"main": "index.js",
+	"repository": "https://github.com/Felipeazs/agrosimbiotica-app.git",
+	"author": "felipeazs <felipeazs@gmail.com>",
+	"license": "MIT",
+	"scripts": {
+		"start": "npm rum start --prefix frontend"
+	}
+}
