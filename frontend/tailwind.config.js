@@ -25,6 +25,7 @@ module.exports = {
             },
             backgroundColor: {
                 primary: '#000000',
+                secondary: 'rgba(49, 20, 54, 0.5)',
             },
             height: {
                 1200: '1200px',
