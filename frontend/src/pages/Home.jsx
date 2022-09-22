@@ -8,9 +8,21 @@ const Home = () => {
     return (
         <div>
             <Hero />
-            <main className="flex flex-col justify-around mt-150 text-white skew-y-6">
+
+            <main className="flex flex-col justify-around text-white ">
                 <div className="bg-back5 object-cover">
-                    <div className="flex flex-row justify-center items-center mb-40 -skew-y-6">
+                    <div className="custom-shape-divider-top-1663882523 mt-20">
+                        <svg
+                            data-name="Layer 1"
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 1200 120"
+                            preserveAspectRatio="none">
+                            <path
+                                d="M1200 0L0 0 598.97 114.72 1200 0z"
+                                class="shape-fill"></path>
+                        </svg>
+                    </div>
+                    <div className="flex flex-row justify-center items-center mb-20">
                         <div className="w-1/2">
                             <h1 className="text-4xl text-end px-40 pb-6 font-Josefin">
                                 Cómo funciona?
@@ -26,7 +38,7 @@ const Home = () => {
                         </div>
                         <div className="bg-agro1 bg-no-repeat h-96 w-1/2"></div>
                     </div>
-                    <div className="flex flex-row-reverse justify-center items-center mb-40 -skew-y-6">
+                    <div className="flex flex-row-reverse justify-center items-center mb-20">
                         <div className="">
                             <p className="text-2xl text-start p-40">
                                 Nuestra plataforma hará la conexión más conveniente entre la oferta
@@ -34,9 +46,9 @@ const Home = () => {
                                 dinero mejorando el desempeño de tu empresa.
                             </p>
                         </div>
-                        <div className="bg-agro2 bg-no-repeat h-96 w-full"></div>
+                        <div className="bg-agro2 bg-no-repeat h-96 w-full bg-cover"></div>
                     </div>
-                    <div className="flex flex-row justify-center items-center mb-40 -skew-y-6">
+                    <div className="flex flex-row justify-center items-center">
                         <div className="">
                             <p className="text-2xl text-end p-40">
                                 Oferta o has tu compra en nuestro Marketplace! Crea tu usuario y así

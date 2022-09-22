@@ -5,8 +5,8 @@ import Button from './UI/Button'
 
 const Contacto = () => {
     return (
-        <div className="flex flex-row justify-center items-center gap-40 bg-white text-black py-20 px-80 -skew-y-8">
-            <div className="text-xl text-end -skew-y-6">
+        <div className="flex flex-row justify-center items-center gap-40 bg-white text-black py-20 px-80 rounded-bl-150">
+            <div className="text-xl text-end">
                 <p>
                     ¿Eres un generador de residuos orgánicos? Haz tu diagnóstico gratis y conoce
                     como puedes mejorar el desempeño económico, ambiental y social de tu empresa.
@@ -30,7 +30,7 @@ const Contacto = () => {
                     />
                 </div>
             </div>
-            <div className="-skew-y-6">
+            <div className="">
                 <Card background="bg-white">
                     <p className="text-center pb-8 text-2xl font-bold">Contáctanos</p>
                     <Input

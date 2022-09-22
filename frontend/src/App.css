@@ -12,3 +12,34 @@
 body {
     background-color: #000000;
 }
+
+.custom-shape-divider-bottom-1663882325 {
+    position: absolute;
+    bottom: 500px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-bottom-1663882325 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 294px;
+}
+
+.custom-shape-divider-bottom-1663882325 .shape-fill {
+    fill: #fff;
+}
+
+.custom-shape-divider-top-1663884187 svg {
+    position: relative;
+    display: block;
+    width: calc(100%);
+    height: 169px;
+}
+
+.custom-shape-divider-top-1663884187 .shape-fill {
+    fill: #ffffff14;
+}

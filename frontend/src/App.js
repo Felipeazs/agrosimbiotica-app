@@ -8,6 +8,7 @@ function App() {
     return (
         <Layout>
             <Home />
+            
         </Layout>
     )
 }

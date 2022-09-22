@@ -34,6 +34,7 @@ module.exports = {
             },
             borderRadius: {
                 30: '30px',
+                150: '250px',
             },
             color: {
                 primary: 'rgba(63, 61, 86, 0.5)',
@@ -65,6 +66,7 @@ module.exports = {
                 1200: '1200px',
                 1000: '1000px',
                 800: '800px',
+                700: '700px',
                 500: '500px',
                 300: '300px',
                 200: '200px',
