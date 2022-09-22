@@ -26,6 +26,8 @@ module.exports = {
                 agro2: 'url("./assets/imgs/agro2.svg")',
                 agro3: 'url("./assets/imgs/agro3.svg")',
                 empresas: 'url("./assets/imgs/nuevas-empresas.jpg")',
+                back3: 'url("./assets/imgs/back4.jpg")',
+                back5: 'url("./assets/imgs/back5.jpg")',
             },
             backgroundSize: {
                 4: '4rem',
@@ -66,6 +68,8 @@ module.exports = {
                 500: '500px',
                 300: '300px',
                 200: '200px',
+                150: '150px',
+                100: '100px',
                 10: '20px',
                 20: '40px',
                 30: '60px',
