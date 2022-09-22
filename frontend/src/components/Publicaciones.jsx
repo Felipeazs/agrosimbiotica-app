@@ -5,15 +5,15 @@ import publicaciones from '../data/publicaciones.json'
 
 const Publicaciones = () => {
     return (
-        <div className="container h-800 -skew-y-6">
+        <div className="container py-40 -skew-y-6">
             <p className="text-xl">Últimas Publicaciones</p>
             <div className="flex flex-row justify-center gap-10">
                 {publicaciones.data.map(p => (
                     <Card key={p.id}>
                         <img
                             src={p.url}
-                            alt=""
-                            className="w-300 pb-5"
+                            alt={p.titulo}
+                            className="w-300 h-200 pb-5 object-cover"
                         />
                         <p>{p.titulo}</p>
                         <p className="w-200 py-4">{p.bajada}</p>

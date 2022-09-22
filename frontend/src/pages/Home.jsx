@@ -2,6 +2,7 @@ import React from 'react'
 import Contacto from '../components/Contacto'
 import Hero from '../components/Hero'
 import Publicaciones from '../components/Publicaciones'
+import Exito from '../components/Exito'
 
 const Home = () => {
     return (
@@ -47,6 +48,7 @@ const Home = () => {
                 </div>
                 <Contacto />
                 <Publicaciones />
+                <Exito />
             </main>
         </div>
     )

@@ -7,7 +7,7 @@ import 'animate.css/animate.min.css'
 const Hero = () => {
     return (
         <>
-            <div className="w-1/2 mx-auto bg-black/60 blur-xl relative top-80 left-64 h-28"></div>
+            <div className="w-1/2 mx-auto bg-black/60 blur-xl relative top-96 left-64 h-28"></div>
             <p className="text-center text-white text-4 absolute top-1/2 right-40">
                 BIENVENIDO A AGROSIMBIÓTICA
             </p>

@@ -11,21 +11,21 @@
             "id": "2",
             "titulo": "Conexiones",
             "bajada": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio odit amet unde commodi natus sed illum eos.",
-            "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "url": "https://images.unsplash.com/photo-1578357078586-491adf1aa5ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=764&q=80",
             "fecha": "12-12-2022"
         },
         {
             "id": "3",
             "titulo": "La Cebada",
             "bajada": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio odit amet unde commodi natus sed illum eos.",
-            "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "url": "https://images.unsplash.com/photo-1415381850596-1d29bce989f8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=880&q=80",
             "fecha": "12-12-2022"
         },
         {
             "id": "4",
             "titulo": "Sector agropecuario",
             "bajada": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Distinctio odit amet unde commodi natus sed illum eos.",
-            "url": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            "url": "https://images.unsplash.com/photo-1632723893457-47e3abc47526?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1171&q=80",
             "fecha": "12-12-2022"
         }
     ]

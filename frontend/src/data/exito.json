@@ -1,0 +1,39 @@
+{
+    "data": [
+        {
+            "id": "1",
+            "nombre": "Olmué",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663872408/Agrosimbiotica/olmue_bm05z2.png"
+        },
+        {
+            "id": "2",
+            "nombre": "Frusan",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663872572/Agrosimbiotica/frusan_xjt9cm.png"
+        },
+        {
+            "id": "3",
+            "nombre": "Dilaco",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663872572/Agrosimbiotica/dialco_enj0mi.png"
+        },
+        {
+            "id": "4",
+            "nombre": "Coagra",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663872571/Agrosimbiotica/coagra_zzl9rm.png"
+        },
+        {
+            "id": "5",
+            "nombre": "Tucapel",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663872572/Agrosimbiotica/tucapel_ub2hyy.png"
+        },
+        {
+            "id": "6",
+            "nombre": "Chilolac",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663872572/Agrosimbiotica/chilolac_vsd4pg.png"
+        },
+        {
+            "id": "7",
+            "nombre": "Bauduco",
+            "url": "https://res.cloudinary.com/hbe31hrjn/image/upload/v1663873110/Agrosimbiotica/bauduco_pdoop4.png"
+        }
+    ]
+}
