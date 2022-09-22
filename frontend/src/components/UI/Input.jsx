@@ -8,12 +8,12 @@ const Input = ({ label, type, placeholder }) => {
                 <input
                     type={type}
                     placeholder={placeholder}
-                    className="w-96 border shadow-sm rounded px-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
+                    className="w-96 text-black border shadow-sm rounded px-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
                 />
             ) : (
                 <textarea
                     rows="5"
-                    className="w-96 border shadow-sm rounded px-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
+                    className="w-96 text-black border shadow-sm rounded px-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
                 />
             )}
         </div>

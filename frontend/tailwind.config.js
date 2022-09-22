@@ -25,6 +25,10 @@ module.exports = {
                 agro1: 'url("./assets/imgs/agro1.svg")',
                 agro2: 'url("./assets/imgs/agro2.svg")',
                 agro3: 'url("./assets/imgs/agro3.svg")',
+                empresas: 'url("./assets/imgs/nuevas-empresas.jpg")',
+            },
+            backgroundSize: {
+                4: '4rem',
             },
             borderRadius: {
                 30: '30px',
@@ -44,7 +48,13 @@ module.exports = {
             height: {
                 1200: '1200px',
                 1000: '1000px',
+                800: '800px',
+                600: '600px',
                 500: '500px',
+            },
+            width: {
+                300: '300px',
+                200: '200px',
             },
             margin: {
                 1200: '1200px',
