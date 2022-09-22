@@ -9,13 +9,15 @@ import exitos from '../data/exito.json'
 
 const Exito = () => {
     return (
-        <AnimationOnScroll
-            animateIn="animate__fadeInUp"
-            delay="300">
-            <div className="text-center -skew-y-6 py-20 mb-40 bg-slate-800 rounded-tl-full rounded-br-full">
-                <p className="text-4 pb-10 underline">Casos de éxito</p>
-                <div className="container flex flex-row justify-center items-center gap-20 flex-wrap ">
-                    {exitos.data.map(e => (
+        <div className="text-center -skew-y-6 py-20 mb-40 bg-slate-800 rounded-tl-full rounded-br-full">
+            <p className="text-4 pb-10 underline">Casos de éxito</p>
+
+            <div className="container flex flex-row justify-center items-center gap-20 flex-wrap ">
+                {exitos.data.map(e => (
+                    <AnimationOnScroll
+                        animateIn="animate__fadeInLeftBig"
+                        animateOut="animate__fadeOutRightBig"
+                        delay={`${e.id * 200}`}>
                         <img
                             key={e.id}
                             src={e.url}
@@ -23,10 +25,10 @@ const Exito = () => {
                             width="200"
                             className=""
                         />
-                    ))}
-                </div>
+                    </AnimationOnScroll>
+                ))}
             </div>
-        </AnimationOnScroll>
+        </div>
     )
 }
 

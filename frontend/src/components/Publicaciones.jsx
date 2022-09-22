@@ -16,7 +16,7 @@ const Publicaciones = () => {
                             className="w-300 h-200 pb-5 object-cover"
                         />
                         <p>{p.titulo}</p>
-                        <p className="w-200 py-4">{p.bajada}</p>
+                        <p className="py-4">{p.bajada}</p>
                         <p className="text-end">{p.fecha}</p>
                     </Card>
                 ))}
