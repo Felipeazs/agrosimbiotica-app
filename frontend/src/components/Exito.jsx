@@ -17,9 +17,9 @@ const Exito = () => {
                     <AnimationOnScroll
                         animateIn="animate__fadeInLeftBig"
                         animateOut="animate__fadeOutRightBig"
-                        delay={`${e.id * 200}`}>
+                        delay={`${e.id * 200}`}
+                        key={e.id}>
                         <img
-                            key={e.id}
                             src={e.url}
                             alt={e.nombre}
                             width="200"

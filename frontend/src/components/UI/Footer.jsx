@@ -42,13 +42,13 @@ const Footer = () => {
             </div>
             <div className="flex flex-row justify-around ">
                 <div className="flex flex-row  gap-4">
-                    <p>Términos y condiciones</p>
-                    <p>Política de privacidad</p>
+                    <p className="underline">Términos y condiciones</p>
+                    <p className="underline">Política de privacidad</p>
                 </div>
                 <div className="flex flex-row gap-4">
-                    <p>Facebook</p>
-                    <p>Twitter</p>
-                    <p>Instagram</p>
+                    <p className="underline">Facebook</p>
+                    <p className="underline">Twitter</p>
+                    <p className="underline">Instagram</p>
                 </div>
             </div>
         </div>
