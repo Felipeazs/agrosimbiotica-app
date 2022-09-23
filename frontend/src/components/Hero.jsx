@@ -13,11 +13,14 @@ const Hero = () => {
             </p>
 
             <div className="mt-700 w-2/5 mx-auto text-white text-2xl">
-                <AnimationOnScroll animateIn="animate__shakeY">
+                <AnimationOnScroll
+                    animateIn="animate__shakeY"
+                    animateOnce="true">
                     <p className="py-6">QUIÉNES SOMOS?</p>
                 </AnimationOnScroll>
                 <AnimationOnScroll
                     animateIn="animate__fadeIn"
+                    animateOnce="true"
                     delay="300">
                     <p className="py-6">
                         AgroSimbiótica es un espacio tecnológico, que identifica oportunidades de
@@ -27,6 +30,7 @@ const Hero = () => {
                 </AnimationOnScroll>
                 <AnimationOnScroll
                     animateIn="animate__fadeIn"
+                    animateOnce="true"
                     delay="600">
                     <p>
                         Es una herramienta de decisión inteligente, que busca el beneficio mutuo en
@@ -36,6 +40,7 @@ const Hero = () => {
                 </AnimationOnScroll>
                 <AnimationOnScroll
                     animateIn="animate__fadeIn"
+                    animateOnce="true"
                     delay="900">
                     <p className="py-6">
                         Así, se podrá entregar a cada empresa que contrate nuestros servicios, de
@@ -45,6 +50,7 @@ const Hero = () => {
                     </p>
                     <AnimationOnScroll
                         animateIn="animate__fadeIn"
+                        animateOnce="true"
                         delay="1000">
                         <div className="w-20 mx-auto pt-40">
                             <img

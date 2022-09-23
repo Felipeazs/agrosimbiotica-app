@@ -10,9 +10,9 @@ const Navigator = () => {
         <nav
             className={`${
                 pathname === '/inicio' || pathname === '/'
-                    ? 'bg-black/25 text-white'
+                    ? 'bg-black/50 text-white'
                     : 'bg-white text-black'
-            }  px-20`}>
+            }  px-20 shadow-xl fixed z-10 w-full`}>
             <div className="flex flex-row justify-between items-center h-20">
                 <div className="w-10">
                     <Link to="/inicio">

@@ -18,7 +18,7 @@ const Exito = () => {
                 {exitos.data.map(e => (
                     <AnimationOnScroll
                         animateIn="animate__fadeInLeftBig"
-                        animateOut="animate__fadeOutRightBig"
+                        animateOnce="true"
                         delay={`${e.id * 200}`}
                         key={e.id}>
                         <img
