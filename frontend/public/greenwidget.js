@@ -184,7 +184,7 @@ function webGreenWidget() {
             boxArray.push(textBox6)
 
             exrexBox = document.createElement('p')
-            exrexBox.style.cssText = `margin: 0px; display: inline; font: normal normal normal 12px/18px Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:93px; top:calc(425px - ${textBoxSpace3}px); opacity: 0;`
+            exrexBox.style.cssText = `margin: 18px; display: inline; font: normal normal normal 12px/18px Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:228px; top:calc(425px - ${textBoxSpace3}px); opacity: 0;`
             exrexBox.innerHTML =
                 'powered by <a href="https://enrex.io/" style="text-decoration: none; color: #49596B; padding-left: 3px;"><img style="position:relative; top:3px;" src="' +
                 IMG_URL +
@@ -371,7 +371,7 @@ function widthDependantParameters() {
     if (window.screen.width > 780 || !isWidgetMobile()) {
         dynamicParams = {
             badgetWidth: 340,
-            badgetHeight: 455,
+            badgetHeight: 500,
             circleTop: -103,
             circleHeigth: 220,
             iconFont: '24px/31px',
