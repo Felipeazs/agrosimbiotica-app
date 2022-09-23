@@ -12,9 +12,10 @@ const Layout = ({ children }) => {
             <div
                 className={`${
                     pathname === '/inicio' || pathname === '/'
-                        ? 'bg-main-background h-1200 bg-cover'
-                        : 'bg-black'
-                }`}>
+                        ? 'bg-main-background bg-cover h-1200'
+                        : 'bg-secondary'
+                }
+                ${pathname === '/evaluacion' ? 'bg-back3' : ''}`}>
                 <Navigator />
                 <div className="">{children}</div>
                 <Footer />

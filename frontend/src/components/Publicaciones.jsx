@@ -8,7 +8,7 @@ const Publicaciones = () => {
     const navigate = useNavigate()
 
     return (
-        <div className=" bg-back3 bg-cover">
+        <div className=" bg-back4 bg-cover">
             <div className="custom-shape-divider-top-1663884187">
                 <svg
                     data-name="Layer 1"
