@@ -4,6 +4,7 @@ import Hero from '../components/Hero'
 import Publicaciones from '../components/Publicaciones'
 import Exito from '../components/Exito'
 
+
 const Home = () => {
     return (
         <div>

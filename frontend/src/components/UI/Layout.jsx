@@ -2,6 +2,7 @@ import { useLocation } from 'react-router-dom'
 
 import Navigator from './Navigator'
 import Footer from './Footer'
+import Widget from '../Widget'
 
 const Layout = ({ children }) => {
     const { pathname } = useLocation()
@@ -17,6 +18,7 @@ const Layout = ({ children }) => {
                 }
                 ${pathname === '/evaluacion' ? 'bg-back3' : ''}`}>
                 <Navigator />
+                <Widget />
                 <div className="">{children}</div>
                 <Footer />
             </div>
