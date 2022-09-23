@@ -112,13 +112,13 @@ function webGreenWidget() {
             boxArray.push(whiteBox)
 
             energyIcon = document.createElement('p')
-            energyIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Bebas Neue; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:${energyTop}px; opacity: 0;`
+            energyIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:${energyTop}px; opacity: 0;`
             energyIcon.innerHTML = '⚡ <br>' + (kwh * 1000).toFixed(4) + ' Wh'
             whiteBox.appendChild(energyIcon)
             boxArray.push(energyIcon)
 
             coalIcon = document.createElement('p')
-            coalIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Bebas Neue; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:10px; opacity: 0;`
+            coalIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:10px; opacity: 0;`
             coalIcon.innerHTML = '☁️ <br>' + co2 + ' g of CO<sub>2</sub>'
             whiteBox.appendChild(coalIcon)
             boxArray.push(coalIcon)
@@ -136,7 +136,7 @@ function webGreenWidget() {
             boxArray.push(textBox1)
 
             textBox2 = document.createElement('p')
-            textBox2.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${textBoxFont2} Bebas Neue; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(144px - ${textBoxTop}px); opacity: 0;`
+            textBox2.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${textBoxFont2} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(144px - ${textBoxTop}px); opacity: 0;`
             let LEDlightMinutes = kwh * 1000 * 6
             if (LEDlightMinutes < 1) {
                 textBox2.innerHTML = LEDlightMinutes.toFixed(2) + `${widgetText?.LEDText2} <br/> 💡`
@@ -209,14 +209,14 @@ function webGreenWidget() {
     })
 
     function WidgetToolTipCss(opacity) {
-        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Bebas Neue; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
+        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Josefin; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
         let inverseWidgetSide = widgetSide === 'right' ? 'left' : 'right'
 
         BadgetHoverBox.innerHTML = `<span style="position:absolute; ${inverseWidgetSide}:0px; top:calc(22px - ${badgetTextHeight}px); white-space: nowrap; width: 270px; text-align: center;">${widgetText?.statusMessage}</span>`
     }
 
     function InactiveWidgetToolTipCss(opacity) {
-        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Bebas Neue; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
+        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Josefin; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
         let inverseWidgetSide = widgetSide === 'right' ? 'left' : 'right'
 
         BadgetHoverBox.innerHTML = `<span style="position:absolute; ${inverseWidgetSide}:0px; top:calc(22px - ${badgetTextHeight}px); white-space: nowrap; width: 270px; text-align: center;">${widgetText?.inactiveMessage}</span>`
