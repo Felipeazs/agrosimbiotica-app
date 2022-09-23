@@ -1,6 +1,6 @@
 import React from 'react'
 
-const tractor = require('../assets/imgs/tractor.png')
+const tractor = require('../assets/imgs/tractor.webp')
 const logo = require('../assets/logo/logo.png')
 
 const Evaluacion = () => {
