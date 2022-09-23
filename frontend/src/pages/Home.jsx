@@ -4,7 +4,6 @@ import Hero from '../components/Hero'
 import Publicaciones from '../components/Publicaciones'
 import Exito from '../components/Exito'
 
-
 const Home = () => {
     return (
         <div>
@@ -27,10 +26,8 @@ const Home = () => {
                         className="flex flex-row justify-center items-center mb-20"
                         id="how">
                         <div className="w-1/2">
-                            <h1 className="text-4xl text-end px-40 pb-6 font-Josefin">
-                                Cómo funciona?
-                            </h1>
-                            <p className="text-xl text-end px-20">
+                            <h1 className="text-4xl text-end px-40 pb-6">Cómo funciona?</h1>
+                            <p className="text-xl text-end px-20 font-Josefin">
                                 Si eres productor de residuos orgánicos, deberás ingresar cargando
                                 solo el nombre de tu empresa, tu actividad, y que residuos tienes.
                                 De esta manera entras a nuestra base de datos para generar
