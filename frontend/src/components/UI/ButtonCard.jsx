@@ -8,7 +8,7 @@ const ButtonCard = ({ children, id, onClickSelect }) => {
 
         setBtnBorder(() => {
             if (btnBorder === '') {
-                return 'button border-2 border-black'
+                return 'button border-2 border-black bg-sixth/10'
             } else {
                 return ''
             }
@@ -19,7 +19,7 @@ const ButtonCard = ({ children, id, onClickSelect }) => {
             onClick={clickHandler}
             type="button"
             id={id}
-            className={`${btnBorder} flex flex-col w-40 h-40 py-5 px-3 text-center justify-between items-center border rounded-md shadow-lg`}>
+            className={`${btnBorder} flex flex-col w-40 h-40 py-5 px-3 text-center justify-between items-center border rounded-md shadow-lg hover:border-black`}>
             {children}
         </button>
     )

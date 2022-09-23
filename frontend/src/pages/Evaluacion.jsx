@@ -81,9 +81,6 @@ const Evaluacion = () => {
     const submitHandler = event => {
         event.preventDefault()
 
-        console.log(rubros.length)
-        console.log(tipos.length)
-
         const evaluacion = {
             rubros: new Set(rubros),
             tipos: new Set(tipos),
@@ -96,12 +93,12 @@ const Evaluacion = () => {
 
     return (
         <div className="container text-white py-40">
-            <div className="flex flex-row h-1000 border">
+            <div className="flex flex-row h-1000 border rounded-md">
                 <div className="w-1/2 relative z-0">
                     <img
                         src={tractor}
                         alt="tractor"
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-cover rounded-tl-md rounded-bl-md"
                     />
 
                     <div className="flex flex-col absolute top-0 gap-16 p-10 text-lg z-10 text-center">
@@ -117,7 +114,7 @@ const Evaluacion = () => {
                             empresas?
                         </p>
                         <p>
-                            Nosotros te ayudaremos a buscar tu mejor opción para mejorar tu
+                            Nosotros te ayudaremos a buscar la mejor opción para mejorar tu
                             desempeño ambiental al mismo tiempo que ahorras dinero.
                         </p>
                     </div>
@@ -188,7 +185,7 @@ const Evaluacion = () => {
                             />
                         </div>
 
-                        <p className="text-black font-black text-2xl mt-20">Ingresa tu email</p>
+                        <p className="text-black font-black text-2xl mt-20">Contacto</p>
                         <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
                             <Input
                                 type="text"

@@ -48,6 +48,7 @@ module.exports = {
                 tertiary: 'rgb(108, 99, 255)',
                 quaternary: 'rgb(63, 61, 86)',
                 fifth: 'rgb(49, 20, 54)',
+                sixth: '#1E293B',
             },
             height: {
                 1200: '1200px',
