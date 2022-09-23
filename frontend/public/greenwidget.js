@@ -112,13 +112,13 @@ function webGreenWidget() {
             boxArray.push(whiteBox)
 
             energyIcon = document.createElement('p')
-            energyIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:${energyTop}px; opacity: 0;`
+            energyIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:${energyTop}px; opacity: 0;`
             energyIcon.innerHTML = '⚡ <br>' + (kwh * 1000).toFixed(4) + ' Wh'
             whiteBox.appendChild(energyIcon)
             boxArray.push(energyIcon)
 
             coalIcon = document.createElement('p')
-            coalIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:10px; opacity: 0;`
+            coalIcon.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${iconFont} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; z-index: 100 !important; position: absolute; left:0px; top:10px; opacity: 0;`
             coalIcon.innerHTML = '☁️ <br>' + co2 + ' g of CO<sub>2</sub>'
             whiteBox.appendChild(coalIcon)
             boxArray.push(coalIcon)
@@ -130,13 +130,13 @@ function webGreenWidget() {
             boxArray.push(circle)
 
             textBox1 = document.createElement('p')
-            textBox1.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal bold ${textBoxFont1} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(120px - ${textBoxTop}px); opacity: 0;`
+            textBox1.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal bold ${textBoxFont1} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(120px - ${textBoxTop}px); opacity: 0;`
             textBox1.innerHTML = widgetText?.LEDText1
             whiteBox.appendChild(textBox1)
             boxArray.push(textBox1)
 
             textBox2 = document.createElement('p')
-            textBox2.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${textBoxFont2} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(144px - ${textBoxTop}px); opacity: 0;`
+            textBox2.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${textBoxFont2} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(144px - ${textBoxTop}px); opacity: 0;`
             let LEDlightMinutes = kwh * 1000 * 6
             if (LEDlightMinutes < 1) {
                 textBox2.innerHTML = LEDlightMinutes.toFixed(2) + `${widgetText?.LEDText2} <br/> 💡`
@@ -148,7 +148,7 @@ function webGreenWidget() {
             boxArray.push(textBox2)
 
             textBox3 = document.createElement('p')
-            textBox3.style.cssText = `margin: 0px; display: inline-block; width: 100%; font: normal normal 900 ${textBoxFont3} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; margin-top: calc(240px - ${textBoxSpace}px); opacity: 0;`
+            textBox3.style.cssText = `margin: 0px; display: inline-block; width: 100%; font: normal normal 900 ${textBoxFont3} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; margin-top: calc(240px - ${textBoxSpace}px); opacity: 0;`
             if (badgetUrl.includes('https')) {
                 textBox3.innerHTML = badgetUrl.substring(8).split('/')[0]
             } else if (badgetUrl.includes('https')) {
@@ -160,13 +160,13 @@ function webGreenWidget() {
             boxArray.push(textBox3)
 
             textBox4 = document.createElement('p')
-            textBox4.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal  bold ${textBoxFont4} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(269px - ${textBoxSpace}px); opacity: 0;`
+            textBox4.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal  bold ${textBoxFont4} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(269px - ${textBoxSpace}px); opacity: 0;`
             textBox4.innerHTML = `${widgetText?.reason} 🌎`
             document.getElementById('badget-box').appendChild(textBox4)
             boxArray.push(textBox4)
 
             textBox5 = document.createElement('p')
-            textBox5.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal ${textBoxFont5} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(340px - ${textBoxSpace2}px); opacity: 0;`
+            textBox5.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal ${textBoxFont5} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(340px - ${textBoxSpace2}px); opacity: 0;`
             textBox5.innerHTML = widgetText?.description
             document.getElementById('badget-box').appendChild(textBox5)
             boxArray.push(textBox5)
@@ -178,13 +178,13 @@ function webGreenWidget() {
             // boxArray.push(dashedLine);
 
             textBox6 = document.createElement('p')
-            textBox6.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${textBoxFont6} Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(405px - ${textBoxSpace3}px); opacity: 0;`
+            textBox6.style.cssText = `margin: 0px; display: inline; width: 100%; font: normal normal normal ${textBoxFont6} Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:0px; top:calc(405px - ${textBoxSpace3}px); opacity: 0;`
             textBox6.innerHTML = widgetText?.linkToWebsite
             document.getElementById('badget-box').appendChild(textBox6)
             boxArray.push(textBox6)
 
             exrexBox = document.createElement('p')
-            exrexBox.style.cssText = `margin: 0px; display: inline; font: normal normal normal 12px/18px Josefin; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:93px; top:calc(425px - ${textBoxSpace3}px); opacity: 0;`
+            exrexBox.style.cssText = `margin: 0px; display: inline; font: normal normal normal 12px/18px Josefin Sans; letter-spacing: 0px; color: #49596B; text-align: center; position:absolute; left:93px; top:calc(425px - ${textBoxSpace3}px); opacity: 0;`
             exrexBox.innerHTML =
                 'powered by <a href="https://enrex.io/" style="text-decoration: none; color: #49596B; padding-left: 3px;"><img style="position:relative; top:3px;" src="' +
                 IMG_URL +
@@ -209,14 +209,14 @@ function webGreenWidget() {
     })
 
     function WidgetToolTipCss(opacity) {
-        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Josefin; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
+        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Josefin Sans; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
         let inverseWidgetSide = widgetSide === 'right' ? 'left' : 'right'
 
         BadgetHoverBox.innerHTML = `<span style="position:absolute; ${inverseWidgetSide}:0px; top:calc(22px - ${badgetTextHeight}px); white-space: nowrap; width: 270px; text-align: center;">${widgetText?.statusMessage}</span>`
     }
 
     function InactiveWidgetToolTipCss(opacity) {
-        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Josefin; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
+        BadgetHoverBox.style.cssText = `display:inline; width:${badgetWidth}px; height:${badgetboxHeight}px; margin:0px; background-color: white; position:fixed; bottom:15px; ${widgetSide}:15px; border-radius: 40px; box-sizing: border-box; border: 2px solid #37CCC8; text-align: left; font: normal normal normal ${widgetText?.statusMessageSize}px/16px Josefin Sans; color:#49596B; overflow:hidden; opacity:${opacity}; z-index: 1000000;`
         let inverseWidgetSide = widgetSide === 'right' ? 'left' : 'right'
 
         BadgetHoverBox.innerHTML = `<span style="position:absolute; ${inverseWidgetSide}:0px; top:calc(22px - ${badgetTextHeight}px); white-space: nowrap; width: 270px; text-align: center;">${widgetText?.inactiveMessage}</span>`
