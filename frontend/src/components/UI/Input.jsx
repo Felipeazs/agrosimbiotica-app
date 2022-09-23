@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({ label, type, placeholder, items }) => {
+const Input = ({ label, type, placeholder, items, onSelectChange, onInputChange }) => {
     return (
         <div className="flex flex-col py-2">
             <label htmlFor="">{label}</label>
@@ -8,7 +8,8 @@ const Input = ({ label, type, placeholder, items }) => {
                 <input
                     type={type}
                     placeholder={placeholder}
-                    className="w-96 text-black border shadow-sm rounded px-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
+                    onChange={onInputChange}
+                    className="w-96 text-black border shadow-sm rounded p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
                 />
             )}
             {type === 'textarea' && (
@@ -18,10 +19,13 @@ const Input = ({ label, type, placeholder, items }) => {
                 />
             )}
             {type === 'select' && (
-                <select className="w-96 text-black border shadow-sm rounded px-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300">
+                <select
+                    className="w-96 text-black border shadow-sm rounded p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
+                    onChange={onSelectChange}>
+                    <option value="">Selecciona una región</option>
                     {items.map(item => (
                         <option
-                            key={item.key}
+                            key={item.id}
                             value={item.value}>
                             {item.nombre}
                         </option>

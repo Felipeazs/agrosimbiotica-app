@@ -50,6 +50,7 @@ const Contacto = () => {
                         type="button"
                         hoverBgColor="hover:bg-quaternary"
                         hoverTextColor="hover:text-white"
+                        disabled="false"
                     />
                 </Card>
             </div>

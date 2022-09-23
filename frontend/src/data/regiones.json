@@ -1,66 +1,82 @@
 {
     "regiones": [
         {
+            "id": "1",
             "nombre": "Arica-Tarapacá",
             "value": "Arica-Tarapacá"
         },
         {
+            "id": "2",
             "nombre": "Tarapacá",
             "value": "Tarapacá"
         },
         {
+            "id": "3",
             "nombre": "Antofagasta",
             "value": "Antofagasta"
         },
         {
+            "id": "4",
             "nombre": "Atacama",
             "value": "Atacama"
         },
         {
+            "id": "5",
             "nombre": "Coquimbo",
             "value": "Coquimbo"
         },
         {
+            "id": "6",
             "nombre": "Valparaíso",
             "value": "Valparaíso"
         },
         {
+            "id": "7",
             "nombre": "Metropolitana",
             "value": "Metropolitana"
         },
         {
+            "id": "8",
             "nombre": "O'Higgins",
             "value": "O'Higgins"
         },
         {
+            "id": "9",
             "nombre": "Maule",
             "value": "Maule"
         },
         {
+            "id": "10",
             "nombre": "Ñuble",
             "value": "Ñuble"
         },
         {
+            "id": "11",
             "nombre": "Biobío",
             "value": "Biobío"
         },
         {
+            "id": "12",
             "nombre": "Araucanía",
             "value": "Araucanía"
         },
         {
+            "id": "13",
             "nombre": "Los Ríos",
             "value": "Los Ríos"
         },
         {
+            "id": "14",
             "nombre": "Los Lagos",
             "value": "Los Lagos"
         },
         {
+            "id": "15",
             "nombre": "Aysén",
             "value": "Aysén"
         },
         {
+            "id": "16",
             "nombre": "Magallanes",
             "value": "Magallanes"
         }
