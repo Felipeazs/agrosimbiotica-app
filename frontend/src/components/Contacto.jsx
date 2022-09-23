@@ -5,7 +5,7 @@ import Button from './UI/Button'
 
 const Contacto = () => {
     return (
-        <div className="flex flex-row justify-center items-center gap-40 bg-white text-black py-20 px-80 rounded-bl-150">
+        <div className="flex flex-row justify-center items-center gap-20 bg-white text-black py-20 px-60 rounded-bl-150">
             <div className="text-xl text-end">
                 <p>
                     ¿Eres un generador de residuos orgánicos? Haz tu diagnóstico gratis y conoce

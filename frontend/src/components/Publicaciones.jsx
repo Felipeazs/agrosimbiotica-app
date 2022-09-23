@@ -1,12 +1,15 @@
 import React from 'react'
-import Button from './UI/Button'
+import { useNavigate } from 'react-router-dom'
 
+import Button from './UI/Button'
 import publicaciones from '../data/publicaciones.json'
 
 const Publicaciones = () => {
+    const navigate = useNavigate()
+
     return (
         <div className=" bg-back3 bg-cover">
-            <div class="custom-shape-divider-top-1663884187">
+            <div className="custom-shape-divider-top-1663884187">
                 <svg
                     data-name="Layer 1"
                     xmlns="http://www.w3.org/2000/svg"
@@ -14,16 +17,16 @@ const Publicaciones = () => {
                     preserveAspectRatio="none">
                     <path
                         d="M1200 120L0 16.48 0 0 1200 0 1200 120z"
-                        class="shape-fill"></path>
+                        className="shape-fill"></path>
                 </svg>
             </div>
-            <div className="container py-20">
+            <div className="container pb-40">
                 <p className="text-4xl pb-10">Últimas Publicaciones</p>
                 <div className="flex flex-row justify-center gap-20">
                     {publicaciones.data.map(p => (
                         <div
                             key={p.id}
-                            className="w-250 mt-10">
+                            className={`w-250 mt-10`}>
                             <img
                                 src={p.url}
                                 alt={p.titulo}
@@ -37,6 +40,10 @@ const Publicaciones = () => {
                                 textColor="white"
                                 hoverBgColor="hover:bg-white"
                                 hoverTextColor="hover:text-black"
+                                clickHandler={() => {
+                                    navigate(`/blog/${p.id}`)
+                                    window.scroll(0, 0)
+                                }}
                             />
                         </div>
                     ))}

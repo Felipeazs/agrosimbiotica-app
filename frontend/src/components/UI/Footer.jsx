@@ -1,11 +1,18 @@
-import React from 'react'
+import { Link, useLocation } from 'react-router-dom'
 
 import Input from './Input'
 import Button from './Button'
 
 const Footer = () => {
+    const { pathname } = useLocation()
     return (
-        <div className="flex flex-col justify-between text-white bg-secondary h-96 py-16">
+        <div
+            className={`flex flex-col justify-between ${
+                pathname === '/' || pathname === '/inicio'
+                    ? 'text-white bg-black'
+                    : 'text-black bg-white'
+            } h-96 py-16`}
+            id="contacto">
             <div className="container flex flex-row justify-around">
                 <div className="">
                     <Input
@@ -46,9 +53,30 @@ const Footer = () => {
                     <p className="underline">Política de privacidad</p>
                 </div>
                 <div className="flex flex-row gap-4">
-                    <p className="underline">Facebook</p>
-                    <p className="underline">Twitter</p>
-                    <p className="underline">Instagram</p>
+                    <p className="underline">
+                        <a
+                            href="https://www.facebook.com"
+                            target="_blank"
+                            rel="noreferrer">
+                            Facebook
+                        </a>
+                    </p>
+                    <p className="underline">
+                        <a
+                            href="https://www.twitter.com"
+                            target="_blank"
+                            rel="noreferrer">
+                            Twitter
+                        </a>
+                    </p>
+                    <p className="underline">
+                        <a
+                            href="https://www.instagram.com"
+                            target="_blank"
+                            rel="noreferrer">
+                            Instagram
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>

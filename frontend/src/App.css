@@ -6,11 +6,19 @@
     font-family: 'Josefin Sans', sans-serif;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .App {
     background-color: #000000;
 }
 body {
     background-color: #000000;
+}
+
+.active {
+    text-decoration: underline rgb(63, 61, 86) 4px;
 }
 
 .custom-shape-divider-bottom-1663882325 {

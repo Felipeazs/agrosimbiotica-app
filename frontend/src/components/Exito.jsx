@@ -9,7 +9,9 @@ import exitos from '../data/exito.json'
 
 const Exito = () => {
     return (
-        <div className="text-center py-40 bg-slate-800 rounded-tr-150">
+        <div
+            className="text-center py-40 bg-slate-800 rounded-tr-150"
+            id="exito">
             <p className="text-4 pb-10 underline">Casos de éxito</p>
 
             <div className="container flex flex-row justify-center items-center gap-20 flex-wrap ">

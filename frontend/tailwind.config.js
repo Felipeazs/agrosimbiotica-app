@@ -47,6 +47,7 @@ module.exports = {
                 secondary: 'rgba(49, 20, 54, 0.5)',
                 tertiary: 'rgb(108, 99, 255)',
                 quaternary: 'rgb(63, 61, 86)',
+                fifth: 'rgb(49, 20, 54)',
             },
             height: {
                 1200: '1200px',

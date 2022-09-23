@@ -19,16 +19,18 @@ const Home = () => {
                             preserveAspectRatio="none">
                             <path
                                 d="M1200 0L0 0 598.97 114.72 1200 0z"
-                                class="shape-fill"></path>
+                                className="shape-fill"></path>
                         </svg>
                     </div>
-                    <div className="flex flex-row justify-center items-center mb-20">
+                    <div
+                        className="flex flex-row justify-center items-center mb-20"
+                        id="how">
                         <div className="w-1/2">
                             <h1 className="text-4xl text-end px-40 pb-6 font-Josefin">
                                 Cómo funciona?
                             </h1>
-                            <p className="text-xl text-end px-40">
-                                Si eres productor de residuos orgánicos, deberás logearte cargando
+                            <p className="text-xl text-end px-20">
+                                Si eres productor de residuos orgánicos, deberás ingresar cargando
                                 solo el nombre de tu empresa, tu actividad, y que residuos tienes.
                                 De esta manera entras a nuestra base de datos para generar
                                 conexiones. Si buscas materiales para tus procesos, busca dentro de

@@ -1,10 +1,19 @@
 import React from 'react'
 
-const Button = ({ title, type, textColor, bgColor, hoverBgColor, hoverTextColor }) => {
+const Button = ({
+    title,
+    type,
+    textColor,
+    bgColor,
+    hoverBgColor,
+    hoverTextColor,
+    clickHandler,
+}) => {
     return (
         <div className="py-2">
             <button
                 type={type}
+                onClick={clickHandler}
                 className={`border py-1 px-4 rounded-lg shadow-sm ${hoverBgColor} ${hoverTextColor} ${
                     bgColor ? bgColor : 'white'
                 } ${
