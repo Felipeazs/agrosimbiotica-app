@@ -1,0 +1,68 @@
+{
+    "regiones": [
+        {
+            "nombre": "Arica-Tarapacá",
+            "value": "Arica-Tarapacá"
+        },
+        {
+            "nombre": "Tarapacá",
+            "value": "Tarapacá"
+        },
+        {
+            "nombre": "Antofagasta",
+            "value": "Antofagasta"
+        },
+        {
+            "nombre": "Atacama",
+            "value": "Atacama"
+        },
+        {
+            "nombre": "Coquimbo",
+            "value": "Coquimbo"
+        },
+        {
+            "nombre": "Valparaíso",
+            "value": "Valparaíso"
+        },
+        {
+            "nombre": "Metropolitana",
+            "value": "Metropolitana"
+        },
+        {
+            "nombre": "O'Higgins",
+            "value": "O'Higgins"
+        },
+        {
+            "nombre": "Maule",
+            "value": "Maule"
+        },
+        {
+            "nombre": "Ñuble",
+            "value": "Ñuble"
+        },
+        {
+            "nombre": "Biobío",
+            "value": "Biobío"
+        },
+        {
+            "nombre": "Araucanía",
+            "value": "Araucanía"
+        },
+        {
+            "nombre": "Los Ríos",
+            "value": "Los Ríos"
+        },
+        {
+            "nombre": "Los Lagos",
+            "value": "Los Lagos"
+        },
+        {
+            "nombre": "Aysén",
+            "value": "Aysén"
+        },
+        {
+            "nombre": "Magallanes",
+            "value": "Magallanes"
+        }
+    ]
+}

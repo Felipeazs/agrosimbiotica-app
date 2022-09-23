@@ -9,6 +9,12 @@
         font-weight: normal;
         src: url('./assets/fonts/JosefinSans-Regular.ttf');
     }
+    @font-face {
+        font-family: 'Josefin';
+        font-weight: 900;
+        font-weight: black;
+        src: url('./assets/fonts/JosefinSans-Bold.ttf');
+    }
 }
 
 * {
@@ -59,4 +65,9 @@ body {
 
 .custom-shape-divider-top-1663884187 .shape-fill {
     fill: #ffffff14;
+}
+
+.button:hover {
+    border: solid 2px rgb(49, 20, 54);
+    cursor: pointer;
 }
