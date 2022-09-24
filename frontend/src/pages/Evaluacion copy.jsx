@@ -43,6 +43,7 @@ const Evaluacion = () => {
         }
     }
     const onClickSelectTipo = tipo => {
+         
         const isTipo = tipos.find(t => t === tipo)
 
         if (isTipo) {
@@ -53,7 +54,6 @@ const Evaluacion = () => {
         }
 
         setTipos(prevState => [...prevState, tipo])
-
         if (rubros.length > 0 && region.trim().length > 0 && email.trim().length > 0) {
             setDisabled(false)
         }
@@ -64,9 +64,10 @@ const Evaluacion = () => {
             setDisabled(false)
         }
 
-        if (event.target.value === '') {
+        if (event.target.value === 'false') {
             setDisabled(true)
         }
+
         setRegion(event.target.value)
     }
 

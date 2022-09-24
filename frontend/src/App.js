@@ -27,11 +27,11 @@ function App() {
                         path="/blog"
                         element={<Blog />}>
                         <Route
-                            path=":id"
-                            index
+                            path=":blogId"
                             element={<BlogDetails />}
                         />
                     </Route>
+
                     <Route
                         path="/evaluacion"
                         element={<Evaluacion />}

@@ -6,16 +6,15 @@ import Footer from './Footer'
 const Layout = ({ children }) => {
     const { pathname } = useLocation()
 
-    console.log(pathname)
     return (
         <div className="App">
             <div
                 className={`${
                     pathname === '/inicio' || pathname === '/'
                         ? 'bg-main-background bg-cover h-1200'
-                        : ''
+                        : 'bg-white'
                 }
-                ${pathname === '/evaluacion' ? 'bg-white' : ''}`}>
+                `}>
                 <Navigator />
                 <div className="">{children}</div>
                 <Footer />

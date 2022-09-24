@@ -1,4 +1,6 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom'
+
 import Card from './UI/Card'
 import Input from './UI/Input'
 import Button from './UI/Button'
@@ -10,6 +12,7 @@ const Contacto = () => {
         email: '',
         mensaje: '',
     })
+    const navigate = useNavigate()
 
     const { nombre, email, mensaje } = contacto
 
@@ -48,9 +51,11 @@ const Contacto = () => {
                         bgColor="bg-tertiary"
                         textColor="text-white"
                         disabled={false}
+                        clickHandler={() => navigate('/evaluacion')}
                         hoverBgColor="hover:bg-quaternary"
                         hoverTextColor="hover:text-white"
                     />
+
                     <Button
                         title="Saber más"
                         type="button"
@@ -59,6 +64,7 @@ const Contacto = () => {
                         textColor="text-black"
                         hoverBgColor="hover:bg-quaternary"
                         hoverTextColor="hover:text-white"
+                        clickHandler={() => navigate('/evaluacion')}
                     />
                 </div>
             </div>
