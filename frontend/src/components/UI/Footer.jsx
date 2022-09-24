@@ -1,13 +1,26 @@
-import { Link, useLocation } from 'react-router-dom'
+import { useState } from 'react'
+import { useLocation } from 'react-router-dom'
 
 import Input from './Input'
 import Button from './Button'
 
 const Footer = () => {
+    const [email, setEmail] = useState('')
+    const [disabled, setDisabled] = useState(true)
     const { pathname } = useLocation()
+
+    const onInputChange = event => {
+        setDisabled(false)
+        setEmail(event.target.value)
+    }
+
+    const submitHandler = event => {
+        event.preventDefault()
+    }
+
     return (
         <div
-            className={`flex flex-col justify-between ${
+            className={`flex flex-col justify-between border-t ${
                 pathname === '/' || pathname === '/inicio'
                     ? 'text-white bg-black'
                     : 'text-black bg-white'
@@ -15,18 +28,22 @@ const Footer = () => {
             id="contacto">
             <div className="container flex flex-row justify-around">
                 <div className="">
-                    <Input
-                        label="Suscríbete a nuestro newsletter"
-                        type="text"
-                        placeholder="ingresa tu correo"
-                    />
-                    <Button
-                        title="Enviar"
-                        textColor="text-white"
-                        bgColor="bg-secondary"
-                        hoverBgColor="hover:bg-white"
-                        hoverTextColor="hover:text-black"
-                    />
+                    <form onSubmit={submitHandler}>
+                        <Input
+                            label="Suscríbete a nuestro newsletter"
+                            type="text"
+                            onInputChange={onInputChange}
+                            placeholder="ingresa tu correo"
+                        />
+                        <Button
+                            title="Enviar"
+                            textColor="text-white"
+                            bgColor="bg-black"
+                            hoverBgColor="hover:bg-white"
+                            hoverTextColor="hover:text-black"
+                            disabled={disabled}
+                        />
+                    </form>
                 </div>
                 <div className="">
                     <p className="pb-4">Contacto</p>

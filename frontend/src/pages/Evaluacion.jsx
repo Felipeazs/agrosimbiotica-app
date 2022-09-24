@@ -87,8 +87,6 @@ const Evaluacion = () => {
             region: region,
             email: email,
         }
-
-        console.log(evaluacion)
     }
 
     return (
@@ -195,8 +193,12 @@ const Evaluacion = () => {
                         </div>
                         <div className="text-center mt-20">
                             <Button
-                                title="enviar"
+                                title="Enviar"
                                 disabled={disabled}
+                                bgColor="bg-white"
+                                textColor="text-black"
+                                hoverBgColor="hover:bg-quaternary"
+                                hoverTextColor="hover:text-white"
                             />
                         </div>
                     </form>

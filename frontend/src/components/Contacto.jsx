@@ -1,9 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Card from './UI/Card'
 import Input from './UI/Input'
 import Button from './UI/Button'
 
 const Contacto = () => {
+    const [disabled, setDisabled] = useState(true)
+    const [contacto, setContacto] = useState({
+        nombre: '',
+        email: '',
+        mensaje: '',
+    })
+
+    const { nombre, email, mensaje } = contacto
+
+    const onInputChange = event => {
+        setContacto(prevState => {
+            return {
+                ...prevState,
+                [event.target.name]: event.target.value,
+            }
+        })
+
+        if (nombre.trim().length >= 5 && email.trim().length >= 5 && mensaje.trim().length >= 5) {
+            setDisabled(false)
+        } else {
+            setDisabled(true)
+        }
+    }
+
+    const submitHandler = event => {
+        event.preventDefault()
+        console.log(contacto)
+    }
     return (
         <div className="flex flex-row justify-center items-center gap-20 bg-white text-black py-20 px-60 rounded-bl-150">
             <div className="text-xl text-end">
@@ -19,12 +47,16 @@ const Contacto = () => {
                         type="button"
                         bgColor="bg-tertiary"
                         textColor="text-white"
+                        disabled={false}
                         hoverBgColor="hover:bg-quaternary"
                         hoverTextColor="hover:text-white"
                     />
                     <Button
                         title="Saber más"
                         type="button"
+                        disabled={false}
+                        bgColor="bg-white"
+                        textColor="text-black"
                         hoverBgColor="hover:bg-quaternary"
                         hoverTextColor="hover:text-white"
                     />
@@ -32,26 +64,35 @@ const Contacto = () => {
             </div>
             <div className="">
                 <Card background="bg-white">
-                    <p className="text-center pb-8 text-2xl font-bold">Contáctanos</p>
-                    <Input
-                        label="Nombre"
-                        type="text"
-                    />
-                    <Input
-                        label="Email"
-                        type="text"
-                    />
-                    <Input
-                        label="Mensaje"
-                        type="textarea"
-                    />
-                    <Button
-                        title="Enviar"
-                        type="button"
-                        hoverBgColor="hover:bg-quaternary"
-                        hoverTextColor="hover:text-white"
-                        disabled="false"
-                    />
+                    <form onSubmit={submitHandler}>
+                        <p className="text-center pb-8 text-2xl font-bold">Contáctanos</p>
+                        <Input
+                            label="Nombre"
+                            name="nombre"
+                            type="text"
+                            onInputChange={onInputChange}
+                        />
+                        <Input
+                            name="email"
+                            label="Email"
+                            type="text"
+                            onInputChange={onInputChange}
+                        />
+                        <Input
+                            name="mensaje"
+                            label="Mensaje"
+                            type="textarea"
+                            onInputChange={onInputChange}
+                        />
+                        <Button
+                            title="Enviar"
+                            bgColor="bg-white"
+                            textColor="text-black"
+                            hoverBgColor="hover:bg-quaternary"
+                            hoverTextColor="hover:text-white"
+                            disabled={disabled}
+                        />
+                    </form>
                 </Card>
             </div>
         </div>
