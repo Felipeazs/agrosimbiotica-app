@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 require('dotenv').config();
 
+const PORT = process.env.PORT || 8000;
+
 const app = express();
 
 app.get('/', (req, res, next) => {
@@ -22,6 +24,6 @@ if (process.env.NODE_ENV === 'production') {
 	});
 }
 
-app.listen(5001, () => {
-	console.log('Listening on port 5001');
+app.listen(PORT, () => {
+	console.log(`Listening on port ${PORT}`);
 });
