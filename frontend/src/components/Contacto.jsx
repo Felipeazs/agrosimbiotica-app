@@ -33,7 +33,7 @@ const Contacto = () => {
 
     const submitHandler = event => {
         event.preventDefault()
-        console.log(contacto)
+       console.log('sumit correo electronico') 
     }
     return (
         <div className="flex flex-row justify-center items-center gap-20 bg-white text-black py-20 px-60 rounded-bl-150">

@@ -38,6 +38,8 @@ const Evaluacion = () => {
         }
         setRubros(prevState => [...prevState, rubro])
 
+        
+
         if (tipos.length > 0 && region.trim().length > 0 && email.trim().length > 0) {
             setDisabled(false)
         }

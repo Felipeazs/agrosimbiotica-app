@@ -7,13 +7,17 @@ import blogs from '../data/publicaciones.json'
 const Blog = () => {
     const navigate = useNavigate()
 
+
     useEffect(() => {
         window.scrollTo(0, 0)
+        
     }, [])
+
     const clickHandler = blogId => {
         navigate(`/blog/${blogId}`)
     }
-    return (
+return (
+
         <>
             <Outlet />
             <div className="container flex flex-row py-40">

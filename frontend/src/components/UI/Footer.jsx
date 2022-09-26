@@ -16,6 +16,7 @@ const Footer = () => {
 
     const submitHandler = event => {
         event.preventDefault()
+        console.log('email', email)
     }
 
     return (
