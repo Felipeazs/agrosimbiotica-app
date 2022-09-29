@@ -6,6 +6,7 @@ import ButtonCard from '../components/UI/ButtonCard'
 import Button from '../components/UI/Button'
 import Input from '../components/UI/Input'
 
+//images
 import { ReactComponent as PlantIcon } from '../assets/imgs/plant.svg'
 import { ReactComponent as FoodIcon } from '../assets/imgs/food.svg'
 import { ReactComponent as BottleIcon } from '../assets/imgs/bottle.svg'
@@ -90,6 +91,7 @@ const Evaluacion = () => {
             tipos: new Set(tipos),
             region: region,
         }
+        console.log(evaluacion)
     }
 
     return (
