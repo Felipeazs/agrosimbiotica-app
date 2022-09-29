@@ -23,9 +23,11 @@ const Evaluacion = () => {
     const [region, setRegion] = useState('')
     const [email, setEmail] = useState('')
     const [disabled, setDisabled] = useState(true)
+    const [success, setSuccess] = useState(false)
 
     useEffect(() => {
         window.scroll(0, 0)
+
     }, [])
 
     const onClickSelectRubro = rubro => {
@@ -92,7 +94,9 @@ const Evaluacion = () => {
             region: region,
         }
         console.log(evaluacion)
+        setSuccess(true)
     }
+
 
     return (
         <div className="container text-white py-40">
@@ -123,90 +127,97 @@ const Evaluacion = () => {
                     </div>
                 </div>
                 <div className="w-full mt-20 pl-20">
-                    <p className="text-black font-black text-2xl">Rubro</p>
-                    <form onSubmit={submitHandler}>
-                        <div className="flex flex-row flex-wrap justify-start items-center gap-5 text-black pb-10">
-                            <ButtonCard
-                                mode="button"
-                                id="plantas"
-                                onClickSelect={onClickSelectRubro}>
-                                <p>Cultivo de plantas</p>
-                                <PlantIcon />
-                            </ButtonCard>
-                            <ButtonCard
-                                mode="button"
-                                id="alimentos"
-                                onClickSelect={onClickSelectRubro}>
-                                <p>Procesamiento de alimentos</p>
-                                <FoodIcon />
-                            </ButtonCard>
-                            <ButtonCard
-                                mode="button"
-                                id="bebidas sin alcohol"
-                                onClickSelect={onClickSelectRubro}>
-                                <p>Fabr. de bebidas no alcohólicas</p>
-                                <BottleIcon />
-                            </ButtonCard>
-                            <ButtonCard
-                                mode="button"
-                                id="bebidas con alcohol"
-                                onClickSelect={onClickSelectRubro}>
-                                <p>Fabr. de bebidas alcohólicas</p>
-                                <BeerIcon />
-                            </ButtonCard>
-                            <ButtonCard
-                                mode="button"
-                                id="otra"
-                                onClickSelect={onClickSelectRubro}>
-                                <p>Otra</p>
-                                <DotIcon />
-                            </ButtonCard>
-                        </div>
-                        <p className="text-black font-black text-2xl">Tipo de Residuo</p>
-                        <div className="flex flex-row flex-wrap items-center gap-5 text-black pb-10">
-                            <ButtonCard
-                                mode="button"
-                                id="líquidos"
-                                onClickSelect={onClickSelectTipo}>
-                                <p>Líquidos</p>
-                                <LiquidIcon />
-                            </ButtonCard>
-                            <ButtonCard
-                                mode="button"
-                                id="sólidos"
-                                onClickSelect={onClickSelectTipo}>
-                                <p>Sólidos</p>
-                                <SolidIcon />
-                            </ButtonCard>
-                        </div>
-                        <p className="text-black font-black text-2xl">Región del país</p>
-                        <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
-                            <Input
-                                type="select"
-                                items={data.regiones}
-                                onSelectChange={onSelectChange}
-                            />
-                        </div>
+                    {success && <p className='text-black font-black text-4xl text-center p-40'>
+                        Sus datos han sido ingresados con éxito!!</p>}
+                    {!success && (
+                        <>
+                            <p className="text-black font-black text-2xl">Rubro</p>
+                            <form onSubmit={submitHandler}>
+                                <div className="flex flex-row flex-wrap justify-start items-center
+                                    gap-5 text-black pb-10">
+                                    <ButtonCard
+                                        mode="button"
+                                        id="plantas"
+                                        onClickSelect={onClickSelectRubro}>
+                                        <p>Cultivo de plantas</p>
+                                        <PlantIcon />
+                                    </ButtonCard>
+                                    <ButtonCard
+                                        mode="button"
+                                        id="alimentos"
+                                        onClickSelect={onClickSelectRubro}>
+                                        <p>Procesamiento de alimentos</p>
+                                        <FoodIcon />
+                                    </ButtonCard>
+                                    <ButtonCard
+                                        mode="button"
+                                        id="bebidas sin alcohol"
+                                        onClickSelect={onClickSelectRubro}>
+                                        <p>Fabr. de bebidas no alcohólicas</p>
+                                        <BottleIcon />
+                                    </ButtonCard>
+                                    <ButtonCard
+                                        mode="button"
+                                        id="bebidas con alcohol"
+                                        onClickSelect={onClickSelectRubro}>
+                                        <p>Fabr. de bebidas alcohólicas</p>
+                                        <BeerIcon />
+                                    </ButtonCard>
+                                    <ButtonCard
+                                        mode="button"
+                                        id="otra"
+                                        onClickSelect={onClickSelectRubro}>
+                                        <p>Otra</p>
+                                        <DotIcon />
+                                    </ButtonCard>
+                                </div>
+                                <p className="text-black font-black text-2xl">Tipo de Residuo</p>
+                                <div className="flex flex-row flex-wrap items-center gap-5 text-black pb-10">
+                                    <ButtonCard
+                                        mode="button"
+                                        id="líquidos"
+                                        onClickSelect={onClickSelectTipo}>
+                                        <p>Líquidos</p>
+                                        <LiquidIcon />
+                                    </ButtonCard>
+                                    <ButtonCard
+                                        mode="button"
+                                        id="sólidos"
+                                        onClickSelect={onClickSelectTipo}>
+                                        <p>Sólidos</p>
+                                        <SolidIcon />
+                                    </ButtonCard>
+                                </div>
+                                <p className="text-black font-black text-2xl">Región del país</p>
+                                <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
+                                    <Input
+                                        type="select"
+                                        items={data.regiones}
+                                        onSelectChange={onSelectChange}
+                                    />
+                                </div>
 
-                        <p className="text-black font-black text-2xl mt-20">Contacto</p>
-                        <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
-                            <Input
-                                type="text"
-                                placeholder="Ingresa tu email"
-                                onInputChange={onInputChange}
-                            />
-                        </div>
-                        <div className="text-center mt-20">
-                            <Button
-                                title="Enviar"
-                                disabled={disabled}
-                                bgColor="bg-white"
-                                textColor="text-black"
-                                hoverBgColor="hover:bg-quaternary"
-                                hoverTextColor="hover:text-white"
-                            />
-                        </div>
-                    </form>
+                                <p className="text-black font-black text-2xl mt-20">Contacto</p>
+                                <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
+                                    <Input
+                                        type="text"
+                                        placeholder="Ingresa tu email"
+                                        onInputChange={onInputChange}
+                                    />
+                                </div>
+                                <div className="text-center mt-20">
+                                    <Button
+                                        title="Enviar"
+                                        disabled={disabled}
+                                        bgColor="bg-white"
+                                        textColor="text-black"
+                                        hoverBgColor="hover:bg-quaternary"
+                                        hoverTextColor="hover:text-white"
+                                    />
+                                </div>
+                            </form>
+                        </>
+                    )}
                 </div>
             </div>
         </div>
