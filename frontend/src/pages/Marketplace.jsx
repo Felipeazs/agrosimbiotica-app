@@ -14,7 +14,7 @@ const Marketplace = () => {
     })
     const [displaySearch, setDisplaySearch] = useState(false)
 
-    const { producto, contenedor } = busqueda
+    const { producto } = busqueda
 
     const changeHandler = (event) => {
         setBusqueda({ ...busqueda, [event.target.name]: event.target.value })
@@ -29,8 +29,7 @@ const Marketplace = () => {
 
     return <div className="container py-40">
         <div className='border flex flex-col rounded'>
-            <div className='relative flex flex-row justify-between items-center p-20 
-                bg-gray-100
+            <div className='relative flex flex-row justify-between items-center p-20 bg-gray-100
                 h-24'>
                 <div className='w-full'>
                     <Input type='text' className='w-full 
@@ -55,11 +54,11 @@ const Marketplace = () => {
                 </form>
             </div>
             <div className='h-full'>
-                {displaySearch && 
-                <>
-                    <p className='font-black text-2xl pt-4 pl-20'>Producto: {producto}</p>
-                    <Productos items={productos} />
-                </>}
+                {displaySearch &&
+                    <>
+                        <p className='font-black text-2xl pt-4 pl-20'>Producto: {producto}</p>
+                        <Productos items={productos} />
+                    </>}
             </div>
         </div>
     </div>

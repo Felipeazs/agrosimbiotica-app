@@ -167,7 +167,7 @@ const Evaluacion = () => {
                                         mode="button"
                                         id="otra"
                                         onClickSelect={onClickSelectRubro}>
-                                        <p>Otra</p>
+                                        <p>Otro</p>
                                         <DotIcon />
                                     </ButtonCard>
                                 </div>
