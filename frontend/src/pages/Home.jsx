@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
+
 import Contacto from '../components/Contacto'
 import Hero from '../components/Hero'
 import Publicaciones from '../components/Publicaciones'
 import Exito from '../components/Exito'
 
 const Home = () => {
+    const { pathname } = useLocation()
+
+    useEffect(() => {
+        console.log(pathname)
+    }, [pathname])
+
+
+
     return (
         <div>
             <Hero />

@@ -95,8 +95,8 @@ const Evaluacion = () => {
         }
         console.log(evaluacion)
         setSuccess(true)
+        window.scroll(0, 0)
     }
-
 
     return (
         <div className="container text-white py-40">
@@ -189,16 +189,17 @@ const Evaluacion = () => {
                                     </ButtonCard>
                                 </div>
                                 <p className="text-black font-black text-2xl">Región del país</p>
-                                <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
+                                <div className="w-300 text-black ">
                                     <Input
                                         type="select"
+                                        option='Selecciona la región'
                                         items={data.regiones}
                                         onSelectChange={onSelectChange}
                                     />
                                 </div>
 
                                 <p className="text-black font-black text-2xl mt-20">Contacto</p>
-                                <div className="flex flex-row flex-wrap items-center gap-5 text-black ">
+                                <div className="w-300 text-black ">
                                     <Input
                                         type="text"
                                         placeholder="Ingresa tu email"

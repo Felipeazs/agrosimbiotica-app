@@ -32,6 +32,11 @@ module.exports = {
             backgroundSize: {
                 4: '4rem',
             },
+            spacing: {
+                13: '52px',
+                26: '109px',
+                27: '119px'
+            },
             borderRadius: {
                 30: '30px',
                 150: '250px',
@@ -61,6 +66,8 @@ module.exports = {
                 200: '200px',
             },
             width: {
+                500: '500px',
+                450: '450px',
                 400: '400px',
                 300: '300px',
                 250: '250px',

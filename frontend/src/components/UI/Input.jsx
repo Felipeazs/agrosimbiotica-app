@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({ label, type, name, placeholder, items, onSelectChange, onInputChange }) => {
+const Input = ({ label, type, name, option, placeholder, items, onSelectChange, onInputChange, className }) => {
     return (
         <div className="flex flex-col py-2">
             <label htmlFor="">{label}</label>
@@ -10,7 +10,8 @@ const Input = ({ label, type, name, placeholder, items, onSelectChange, onInputC
                     name={name}
                     placeholder={placeholder}
                     onChange={onInputChange}
-                    className="w-96 text-black border shadow-sm rounded p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
+                    className={`w-full text-black border shadow-sm rounded p-2 focus:outline-none 
+                    focus:border-primary focus:ring-1 focus:ring-violet-300 ${className}`}
                 />
             )}
             {type === 'textarea' && (
@@ -18,14 +19,16 @@ const Input = ({ label, type, name, placeholder, items, onSelectChange, onInputC
                     rows="5"
                     name={name}
                     onChange={onInputChange}
-                    className="w-96 text-black border shadow-sm rounded p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
+                    className="w-96 text-black border shadow-sm rounded p-2 focus:outline-none 
+                    focus:border-primary focus:ring-1 focus:ring-violet-300"
                 />
             )}
             {type === 'select' && (
                 <select
-                    className="w-96 text-black border shadow-sm rounded p-2 focus:outline-none focus:border-primary focus:ring-1 focus:ring-violet-300"
-                    onChange={onSelectChange}>
-                    <option value="">Selecciona una región</option>
+                    className={`w-auto text-black border shadow-sm rounded p-2 focus:outline-none 
+                    focus:border-primary focus:ring-1 focus:ring-violet-300 ${className}`}
+                    name={name} onChange={onSelectChange}>
+                    <option value="">{option}</option>
                     {items.map(item => (
                         <option
                             key={item.id}

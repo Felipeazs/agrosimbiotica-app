@@ -16,7 +16,6 @@ const Blog = () => {
         navigate(`/blog/${blogId}`)
     }
     return (
-
         <>
             <Outlet />
             <div className='container'>
@@ -116,7 +115,6 @@ const Blog = () => {
                     </div>
 
                 </div>
-
             </div>
         </>
     )

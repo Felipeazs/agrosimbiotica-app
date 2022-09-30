@@ -21,14 +21,13 @@ const Footer = () => {
 
     return (
         <div
-            className={`flex flex-col justify-between border-t ${
-                pathname === '/' || pathname === '/inicio'
-                    ? 'text-white bg-black'
-                    : 'text-black bg-white'
-            } h-96 py-16`}
+            className={`flex flex-col justify-between border-t ${pathname === '/' || pathname === '/inicio'
+                ? 'text-white bg-black'
+                : 'text-black bg-white'
+                } h-96 py-16`}
             id="contacto">
             <div className="container flex flex-row justify-around">
-                <div className="">
+                <div className="w-400">
                     <form onSubmit={submitHandler}>
                         <Input
                             label="Suscríbete a nuestro newsletter"

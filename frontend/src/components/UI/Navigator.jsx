@@ -6,16 +6,16 @@ const logoBlack = require('../../assets/logo/logo2.png')
 
 const Navigator = () => {
     const { pathname } = useLocation()
+
     return (
         <nav
-            className={`${
-                pathname === '/inicio' || pathname === '/'
-                    ? 'bg-black/50 text-white'
-                    : 'bg-white text-black'
-            }  px-20 shadow-xl fixed z-10 w-full`}>
+            className={`${pathname === '/inicio' || pathname === '/'
+                ? 'bg-black/50 text-white'
+                : 'bg-white text-black'
+                }  px-20 shadow-xl fixed z-10 w-full`}>
             <div className="flex flex-row justify-between items-center h-20">
                 <div className="w-10">
-                    <Link to="/inicio">
+                    <Link to="/">
                         <img
                             src={pathname === '/' || pathname === '/inicio' ? logoWhite : logoBlack}
                             alt="logo"

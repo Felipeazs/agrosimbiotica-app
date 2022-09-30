@@ -1,0 +1,34 @@
+{
+    "contenedorItems": [
+        {
+            "id": "1",
+            "nombre": "caja",
+            "value": "caja"
+        },
+        {
+            "id": "2",
+            "nombre": "bolsa",
+            "value": "bolsa"
+        },
+        {
+            "id": "3",
+            "nombre": "paquete",
+            "value": "paquete"
+        },
+        {
+            "id": "4",
+            "nombre": "tambor",
+            "value": "tambor"
+        },
+        {
+            "id": "5",
+            "nombre": "granel",
+            "value": "granel"
+        },
+        {
+            "id": "6",
+            "nombre": "estanque",
+            "value": "estanque"
+        }
+    ]
+}

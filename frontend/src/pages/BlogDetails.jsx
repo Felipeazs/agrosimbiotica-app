@@ -15,7 +15,6 @@ const BlogDetails = () => {
         window.scroll(0, 0)
     }, [blogId])
 
-
     if (!loading) {
         return (
             <div className="container flex flex-col pt-40">
