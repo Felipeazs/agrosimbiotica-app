@@ -1,19 +1,9 @@
-import React, { useEffect } from 'react'
-import { useLocation } from 'react-router-dom'
-
 import Contacto from '../components/Contacto'
 import Hero from '../components/Hero'
 import Publicaciones from '../components/Publicaciones'
 import Exito from '../components/Exito'
 
 const Home = () => {
-    const { pathname } = useLocation()
-
-    useEffect(() => {
-        console.log(pathname)
-    }, [pathname])
-
-
 
     return (
         <div>
@@ -32,6 +22,7 @@ const Home = () => {
                                 className="shape-fill"></path>
                         </svg>
                     </div>
+
                     <div
                         className="flex flex-row justify-center items-center mb-20"
                         id="how">
@@ -48,6 +39,7 @@ const Home = () => {
                         </div>
                         <div className="bg-agro1 bg-no-repeat h-96 w-1/2"></div>
                     </div>
+
                     <div className="flex flex-row-reverse justify-center items-center mb-20">
                         <div className="">
                             <p className="text-2xl text-start p-40">
@@ -58,6 +50,7 @@ const Home = () => {
                         </div>
                         <div className="bg-agro2 bg-no-repeat h-96 w-full bg-cover"></div>
                     </div>
+
                     <div className="flex flex-row justify-center items-center">
                         <div className="">
                             <p className="text-2xl text-end p-40">
@@ -69,6 +62,7 @@ const Home = () => {
                         </div>
                         <div className="bg-agro3 bg-no-repeat h-96 w-full"></div>
                     </div>
+
                 </div>
                 <Contacto />
                 <Publicaciones />

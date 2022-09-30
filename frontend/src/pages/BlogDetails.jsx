@@ -25,6 +25,7 @@ const BlogDetails = () => {
                         <img src={publicacion.url} alt={publicacion.autor} className='w-400 h-auto 
                         object-cover' />
                     </div>
+
                     <div className='text-lg w-full'>
                         <p className='italic'>autor: {publicacion.autor}</p>
                         {publicacion.articulo.map((t, i) => (

@@ -126,6 +126,7 @@ const Evaluacion = () => {
                         </p>
                     </div>
                 </div>
+
                 <div className="w-full mt-20 pl-20">
                     {success && <p className='text-black font-black text-4xl text-center p-40'>
                         Sus datos han sido ingresados con éxito!!</p>}
@@ -171,6 +172,7 @@ const Evaluacion = () => {
                                         <DotIcon />
                                     </ButtonCard>
                                 </div>
+
                                 <p className="text-black font-black text-2xl">Tipo de Residuo</p>
                                 <div className="flex flex-row flex-wrap items-center gap-5 text-black pb-10">
                                     <ButtonCard
@@ -188,6 +190,7 @@ const Evaluacion = () => {
                                         <SolidIcon />
                                     </ButtonCard>
                                 </div>
+
                                 <p className="text-black font-black text-2xl">Región del país</p>
                                 <div className="w-300 text-black ">
                                     <Input
@@ -217,6 +220,7 @@ const Evaluacion = () => {
                                     />
                                 </div>
                             </form>
+
                         </>
                     )}
                 </div>

@@ -36,6 +36,7 @@ const Marketplace = () => {
                     py-4' name='producto' placeholder='Busca el residuo que necesitas'
                         onInputChange={changeHandler} />
                 </div>
+
                 <form onSubmit={submitHandler}>
                     <Input type='select'
                         option='selecciona el contenedor'
@@ -53,6 +54,7 @@ const Marketplace = () => {
                         disabled={false} />
                 </form>
             </div>
+
             <div className='h-full'>
                 {displaySearch &&
                     <>

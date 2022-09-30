@@ -29,6 +29,7 @@ const Blog = () => {
                             style={{ objectFit: 'cover' }}
                             className=" hover:opacity-70"
                         />
+
                         <div className="absolute bottom-10 left-1/4">
                             <Button
                                 title="ver publicación"
@@ -67,6 +68,7 @@ const Blog = () => {
                                 <p className="text-white">{blogs.data[1].fecha}</p>
                             </div>
                         </div>
+
                         <div className="flex flex-row relative h-300 w-full">
                             <img
                                 src={blogs.data[2].url}
@@ -99,6 +101,7 @@ const Blog = () => {
                             height="auto"
                             className="object-cover hover:opacity-70"
                         />
+
                         <div className="absolute pt-20 pl-10">
                             <Button
                                 title="ver publicación"
