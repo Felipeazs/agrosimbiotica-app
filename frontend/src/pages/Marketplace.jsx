@@ -6,12 +6,12 @@ import Button from '../components/UI/Button'
 import Productos from '../components/productos/Productos'
 
 //data
-import productos from '../data/productos.json'
+import residuos from '../data/productos.json'
 import data from '../data/contenedores.json'
 
 const Marketplace = () => {
     const [busqueda, setBusqueda] = useState({
-        producto: '',
+        residuo: '',
         contenedor: '',
     })
     const [displaySearch, setDisplaySearch] = useState(false)
@@ -19,12 +19,11 @@ const Marketplace = () => {
     const [displayErrorMessage, setDisplayErrorMessage] = useState('')
     const [error, setError] = useState(false)
 
-    const { producto, contenedor } = busqueda
+    const { residuo, contenedor } = busqueda
 
     const changeHandler = (event) => {
         setError(false)
         setErrorMessage('')
-        setDisplaySearch(false)
         setBusqueda({ ...busqueda, [event.target.name]: event.target.value })
     }
 
@@ -32,22 +31,22 @@ const Marketplace = () => {
         event.preventDefault()
         setDisplayErrorMessage('')
 
-        if (producto.trim().length === 0) {
-            setErrorMessage('Por favor, ingresa el producto que estas buscando')
+        if (residuo.trim().length === 0) {
+            setErrorMessage('Por favor, ingresa el residuo que estas buscando')
             return
         }
 
-        const searchedProduct = productos.datos.find(prod => prod.residuo === producto)
+        const searchedProduct = residuos.datos.find(prod => prod.residuo === residuo)
         if (searchedProduct === undefined || searchedProduct === null) {
             setError(true)
-            setDisplayErrorMessage(`El producto ${producto} no se encuentra`)
+            setDisplayErrorMessage(`El residuo ${residuo} no se encuentra`)
             return
         }
 
-        const searchedContainer = productos.datos.find(prod => prod.contenedor === contenedor)
+        const searchedContainer = residuos.datos.find(prod => prod.contenedor === contenedor)
         console.log(searchedContainer)
         if (searchedContainer === undefined || searchedContainer === null) {
-            setDisplayErrorMessage('El producto se encuentra pero no en el envase o contenedor que buscas. Creemos que los siguientes contenedores te podrían interesar')
+            setDisplayErrorMessage('El residuo se encuentra pero no en el envase o contenedor que buscas. Creemos que los siguientes contenedores te podrían interesar')
         }
 
         setDisplaySearch(true)
@@ -59,8 +58,11 @@ const Marketplace = () => {
             <div className='relative flex flex-row justify-between items-center p-20 bg-gray-100
                 h-24'>
                 <div className='w-full'>
-                    <Input type='text' className='w-full 
-                    py-4' name='producto' placeholder='Busca el residuo que necesitas'
+                    <Input
+                        type='text'
+                        className='w-full py-4'
+                        name='residuo'
+                        placeholder='Busca el residuo que necesitas'
                         onInputChange={changeHandler} />
                 </div>
 
@@ -87,11 +89,20 @@ const Marketplace = () => {
 
             <div className='h-full'>
                 <>
-                    {!error && displaySearch && <p className='font-black text-2xl pt-4 pl-20'>
-                        Producto encontrado: {producto}</p>}
-                    {error && <p className='font-black text-2xl pt-4 pl-20'>{displayErrorMessage} </p>}
-                    {!error && displaySearch && <p className='text-xl pl-20 pr-40'>{displayErrorMessage}</p>}
-                    {!error && displaySearch && <Productos items={productos} />}
+                    {!error && displaySearch &&
+                        <p className='font-black text-2xl pt-4 pl-20'>
+                            Residuo encontrado: {residuo}
+                        </p>}
+                    {error &&
+                        <p className='font-black text-2xl pt-4 pl-20'>
+                            {displayErrorMessage}
+                        </p>}
+                    {!error && displaySearch &&
+                        <p className='text-xl pl-20 pr-40'>
+                            {displayErrorMessage}
+                        </p>}
+                    {!error && displaySearch &&
+                        <Productos items={residuos} />}
                 </>
             </div>
         </div>
