@@ -1,5 +1,6 @@
 import React from 'react'
 
+//components
 import Producto from './Producto'
 
 const Productos = ({ items }) => {

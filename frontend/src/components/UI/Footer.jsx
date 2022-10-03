@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
+//components
 import Input from './Input'
 import Button from './Button'
 
@@ -26,6 +27,7 @@ const Footer = () => {
                 : 'text-black bg-white'
                 } h-96 py-16`}
             id="contacto">
+
             <div className="container flex flex-row justify-around">
                 <div className="w-400">
                     <form onSubmit={submitHandler}>
@@ -45,6 +47,7 @@ const Footer = () => {
                         />
                     </form>
                 </div>
+
                 <div className="">
                     <p className="pb-4">Contacto</p>
                     <p>Dirección</p>
@@ -69,6 +72,7 @@ const Footer = () => {
                     <p className="underline">Términos y condiciones</p>
                     <p className="underline">Política de privacidad</p>
                 </div>
+
                 <div className="flex flex-row gap-4">
                     <p className="underline">
                         <a

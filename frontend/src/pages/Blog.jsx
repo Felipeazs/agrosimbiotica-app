@@ -1,7 +1,10 @@
 import React, { useEffect } from 'react'
 import { useNavigate, Outlet } from 'react-router-dom'
 
+//components
 import Button from '../components/UI/Button'
+
+//data
 import blogs from '../data/publicaciones.json'
 
 const Blog = () => {
@@ -15,12 +18,13 @@ const Blog = () => {
     const clickHandler = blogId => {
         navigate(`/blog/${blogId}`)
     }
+
     return (
         <>
             <Outlet />
             <div className='container'>
-                <p className='font-black text-2xl py-10'>Publicaciones</p>
-                <div className="container flex flex-row pb-40">
+                <p className='font-black text-2xl pt-40 pb-10 '>Publicaciones</p>
+                <div className="container flex flex-row">
                     <div className="flex flex-row relative h-600 w-1/2">
                         <img
                             src={blogs.data[0].url}

@@ -1,3 +1,4 @@
+//components
 import Contacto from '../components/Contacto'
 import Hero from '../components/Hero'
 import Publicaciones from '../components/Publicaciones'
@@ -8,7 +9,6 @@ const Home = () => {
     return (
         <div>
             <Hero />
-
             <main className="flex flex-col justify-around text-white ">
                 <div className="bg-back5 object-cover">
                     <div className="custom-shape-divider-top-1663882523 mt-20">

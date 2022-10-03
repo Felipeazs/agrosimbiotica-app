@@ -1,6 +1,7 @@
 import { useLocation } from 'react-router-dom'
 import { Link, NavLink } from 'react-router-dom'
 
+//logos
 const logoWhite = require('../../assets/logo/logo.png')
 const logoBlack = require('../../assets/logo/logo2.png')
 

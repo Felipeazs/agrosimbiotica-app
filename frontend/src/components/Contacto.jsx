@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
+//components
 import Card from './UI/Card'
 import Input from './UI/Input'
 import Button from './UI/Button'
@@ -33,10 +34,11 @@ const Contacto = () => {
 
     const submitHandler = event => {
         event.preventDefault()
-       console.log('sumit correo electronico') 
+        console.log('sumit correo electronico')
     }
     return (
-        <div className="flex flex-row justify-center items-center gap-20 bg-white text-black py-20 px-60 rounded-bl-150">
+        <div className="flex flex-row justify-center items-center gap-20 bg-white text-black 
+            py-20 px-60 rounded-bl-150">
             <div className="text-xl text-end">
                 <p>
                     ¿Eres un generador de residuos orgánicos? Haz tu diagnóstico gratis y conoce

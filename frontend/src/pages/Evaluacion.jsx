@@ -1,12 +1,14 @@
 import React, { useState, useEffect } from 'react'
 
+//data
 import data from '../data/regiones.json'
 
+//components
 import ButtonCard from '../components/UI/ButtonCard'
 import Button from '../components/UI/Button'
 import Input from '../components/UI/Input'
 
-//images
+//images and logos
 import { ReactComponent as PlantIcon } from '../assets/imgs/plant.svg'
 import { ReactComponent as FoodIcon } from '../assets/imgs/food.svg'
 import { ReactComponent as BottleIcon } from '../assets/imgs/bottle.svg'
@@ -211,6 +213,7 @@ const Evaluacion = () => {
                                 </div>
                                 <div className="text-center mt-20">
                                     <Button
+                                        type='submit'
                                         title="Enviar"
                                         disabled={disabled}
                                         bgColor="bg-white"

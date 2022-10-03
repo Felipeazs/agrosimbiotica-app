@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
+//data
 import publicaciones from '../data/publicaciones.json'
 
 const BlogDetails = () => {

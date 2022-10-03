@@ -14,6 +14,7 @@ const Input = ({ label, type, name, option, placeholder, items, onSelectChange, 
                     focus:border-primary focus:ring-1 focus:ring-violet-300 ${className}`}
                 />
             )}
+
             {type === 'textarea' && (
                 <textarea
                     rows="5"
@@ -23,6 +24,7 @@ const Input = ({ label, type, name, option, placeholder, items, onSelectChange, 
                     focus:border-primary focus:ring-1 focus:ring-violet-300"
                 />
             )}
+
             {type === 'select' && (
                 <select
                     className={`w-auto text-black border shadow-sm rounded p-2 focus:outline-none 
