@@ -42,6 +42,9 @@ const Navigator = () => {
                         <NavLink to="/evaluacion">Evalúa tus oportunidades</NavLink>
                     </li>
                     <li>
+                    <NavLink to="/diagnostico">Diagnóstico</NavLink>
+                    </li>
+                    <li>
                         <a href="#contacto">Contacto</a>
                     </li>
                 </ul>

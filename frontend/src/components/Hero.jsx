@@ -5,6 +5,7 @@ import { AnimationOnScroll } from 'react-animation-on-scroll'
 import 'animate.css/animate.min.css'
 
 const Hero = () => {
+    
     return (
         <>
             <div className="w-1/2 mx-auto bg-black/60 blur-xl relative top-96 left-64 h-28"></div>
@@ -18,6 +19,7 @@ const Hero = () => {
                     animateOnce="true">
                     <p className="py-6">QUIÉNES SOMOS?</p>
                 </AnimationOnScroll>
+
                 <AnimationOnScroll
                     animateIn="animate__fadeIn"
                     animateOnce="true"
@@ -28,6 +30,7 @@ const Hero = () => {
                         generados por diferentes empresas para usarlos como recursos.
                     </p>
                 </AnimationOnScroll>
+
                 <AnimationOnScroll
                     animateIn="animate__fadeIn"
                     animateOnce="true"
@@ -38,6 +41,7 @@ const Hero = () => {
                         recursos y disminuyendo la generación de residuos.
                     </p>
                 </AnimationOnScroll>
+
                 <AnimationOnScroll
                     animateIn="animate__fadeIn"
                     animateOnce="true"
@@ -48,6 +52,7 @@ const Hero = () => {
                         nuevas oportunidades de negocios a través de la valorización de sus residuos
                         como materia prima en otros procesos.
                     </p>
+
                     <AnimationOnScroll
                         animateIn="animate__fadeIn"
                         animateOnce="true"
@@ -61,6 +66,7 @@ const Hero = () => {
                     </AnimationOnScroll>
                 </AnimationOnScroll>
             </div>
+                
         </>
     )
 }

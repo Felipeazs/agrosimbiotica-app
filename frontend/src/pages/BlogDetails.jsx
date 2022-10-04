@@ -21,6 +21,7 @@ const BlogDetails = () => {
             <div className="container flex flex-col pt-40">
                 <p className='text-2xl font-black'>{publicacion.titulo}</p>
                 <p>{publicacion.fecha}</p>
+
                 <div className='container flex flex-row gap-4 pt-4 pb-10'>
                     <div className='w-400 h-auto'>
                         <img src={publicacion.url} alt={publicacion.autor} className='w-400 h-auto 
@@ -39,6 +40,7 @@ const BlogDetails = () => {
                 </div>
                 <p className='text-center italic'>{publicacion.autor}</p>
                 <hr />
+
             </div>
         )
     }

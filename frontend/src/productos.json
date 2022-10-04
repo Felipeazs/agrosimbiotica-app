@@ -1,0 +1,134 @@
+{
+    "datos": [
+        {
+            "id": "1",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "2",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "3",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "4",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "5",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "6",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "7",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "8",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "9",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        },
+        {
+            "id": "10",
+            "residuo": "cebada",
+            "contenedor": "bolsa",
+            "kilos": "200kg",
+            "proveedor": "Cervecería Lazo",
+            "fecha_publicacion": "12-12-2021",
+            "contacto": {
+                "email": "contacto@lazo.cl",
+                "telefono": "123456789"
+            },
+            "image": "https://agrobio.org/sites/default/files/2022-03/Cebada%20modificada%20gen%C3%A9ticamente%20a%20prueba%20en%20Reino%20Unido.jpg"
+        }
+    ]
+}

@@ -1,0 +1,360 @@
+{
+    "ambitos": [
+        {
+            "id": "1",
+            "ambito": "Adquisiciones Sostenibles",
+            "temas": [
+                {
+                    "id": "1.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "1.1.1",
+                            "cuestion": "Utilización de recusrsos sostenibles: iniciativas de disminución en el consumo o sustitución de insumos de energía a fuentes renivables"
+                        },
+                        {
+                            "id": "1.1.2",
+                            "cuestion": "Gestión sostenible de los recursos: acciones que promueven el uso responsable y óptimo de los insumos de energía, siendo trazables y analizados en el ciclo de vida"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "1.2.1",
+                            "cuestion": "Impacto en el desarrollo de la organización: se ha determinado en el efecto económico soblre toda la cadena de valor la optimización en el uso de materiales y energía. Se conoce la voluntad de pago de los clientes"
+                        },
+                        {
+                            "id": "1.2.2",
+                            "cuestion": "Gestión eficaz de los recursos: existen acciones que optimiza el uso de equipos y recursos energéticos, evitnado la interrupción del suministro y el almacenamiento innecesario"
+                        },
+                        {
+                            "id": "1.2.3",
+                            "cuestion": "Análisis de la cadena de suministro: existen iniciativas qye optimizan el flujo logístico para limitar el impacto ambiental de la adquisición de suministros"
+                        },
+                        {
+                            "id": "1.2.4",
+                            "cuestion": "Compras sostenibles: los proveedores cuentan con política ambiental y se incorpora en compras dicha eco-condicionalidad"
+                        }
+                    ]
+                },
+                {
+                    "id": "1.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "1.3.1",
+                            "cuestion": "Valorización de recursos: existen iniciativas para satisfacer las necesidades de la empresa de manera local, creándose puestos de trabajo duraderos y habilitando infraestructura adecuada para ello"
+                        },
+                        {
+                            "id": "1.3.2",
+                            "cuestion": "Relaciones y condiciones de trabajo: las políticas de adquisición de insumos de energía son compatibles con objetivos de desarrollo sostenible, garantizando condiciones de extreacción y producción de materias primas respetuosas de los de derechos de la salud de los trabajadores"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "2",
+            "ambito": "Ecodiseño",
+            "temas": [
+                {
+                    "id": "2.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "2.1.1",
+                            "cuestion": "Enfoque multicriterio: se conocen las externalidades positicas/negativas que genera la actividad, teniendo un plan de gestión de ellas"
+                        },
+                        {
+                            "id": "2.1.2",
+                            "cuestion": "Enfoque de ciclo de vida: existen iniciativas para optimizar el rendimiento ambiental de actividad"
+                        },
+                        {
+                            "id": "2.1.3",
+                            "cuestion": "Enfoque sustémico: existen iniciativas para remanufacturar o reutilizar componentes de la actividad"
+                        },
+                        {
+                            "id": "2.1.4",
+                            "cuestion": "Enfoque multijugador de la cadena de valor del producto: se involucran a todos los actores externos de la cadena de valor en el rediseño de las actividades"
+                        },
+                        {
+                            "id": "2.1.5",
+                            "cuestion": "Implementación del enfoque de diseño ecológico: existen iniciativas para incorporar materiales reciclados, fomentar el uso de energía renivables y evitar el desperdicio de materiales"
+                        },
+                        {
+                            "id": "2.1.6",
+                            "cuestion": "Herramientas de ecodiseño: existen iniciativas para medir ecocompatibilidad de productos y su conformidad con el conjunto de requisitos de reparabilidad, reutilización y reclaje de ellos"
+                        }
+                    ]
+                },
+                {
+                    "id": "2.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "2.2.1",
+                            "cuestion": "Palancas de desarrollo para la organización: se identifican los aspectos positivos frente a los clientes la incorporación de iniciativas de economía circular, satisfaciendo sus necesidades mediante la innovación"
+                        },
+                        {
+                            "id": "2.2.2",
+                            "cuestion": "Ciclo de vida: de identifica la relación costo/beneficio de las actividades y el costo de del ciclo de vida de la actividad, internalizando dichos costos y optimizando los productos mediante contabilidad de flujo de materiales"
+                        },
+                        {
+                            "id": "2.2.3",
+                            "cuestion": "Principio de funcionalidad: se considera una perspectiva de economía de servicios funcionales"
+                        }
+                    ]
+                },
+                {
+                    "id": "2.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "2.3.1",
+                            "cuestion": "Impacto en la comunidad y los trabajadores: Existen iniciativas que integran el desarrollo social, los cuales son destacados y promocionados en la coumidad, la cual se ve beneficiada por la desmaterialización completa o parcial de la actividad"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "3",
+            "ambito": "Simbiosis Industrial",
+            "temas": [
+                {
+                    "id": "3.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "3.1.1",
+                            "cuestion": "Intercambios de flujos: se encuentran identificadas las salidas que constituyen insumos para organizaciones vecinas, así como los beneficios de compartir servicios y almacenamiento para optimizar su uso"
+                        }
+                    ]
+                },
+                {
+                    "id": "3.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "3.2.1",
+                            "cuestion": "Intercambios de flujo: la calidad y trazabilidad de materias primas o secundarias recicladas resultantes de intercambios de flujo garantizadas a las organizaciones vecinas"
+                        },
+                        {
+                            "id": "3.2.2",
+                            "cuestion": "Sinergias entre organizaciones: se conocen los costos y beneficios de sustituir o compartir servicios o productos"
+                        },
+                        {
+                            "id": "3.2.3",
+                            "cuestion": "Economía colaborativa: existen iniciativas para utilizar maquinarias y servicios de manera compartida con organizaciones masivas"
+                        }
+                    ]
+                },
+                {
+                    "id": "3.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "3.3.1",
+                            "cuestion": "Ecosistema local: existen iniciativas para integrar trabajadores qye hayan cesado sus actividades, promoviendo empleos colaborativos para otras empresas"
+                        },
+                        {
+                            "id": "3.3.2",
+                            "cuestion": "Valorización de recursos: los subproductos productos se pueden usar de manera conjunta creando valor para orgnizaciones locales"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "4",
+            "ambito": "Economía funcional o de servicios (sistemas producto-servicio)",
+            "temas": [
+                {
+                    "id": "4.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "4.1.1",
+                            "cuestion": "Sustitución de bienes por servicios: existen iniciativas en donde se reemplazan bienes por servicios, identificándose la disminución en la presión ambiental en la cadena de valor"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "4.2.1",
+                            "cuestion": "Desarrollo de nuevas soluciones por parte de la organización: se conocen cuales son las posibilidades para proponer soluciones de consumo colaborativo y participativo (costo/beneficio)"
+                        }
+                    ]
+                },
+                {
+                    "id": "4.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "4.3.1",
+                            "cuestion": "Palancas de desarrollo local: existen iniciativas que permiten ls creación de un sistema colaboratico, creando cohesión social e impactando en el empleo local"
+                        },
+                        {
+                            "id": "4.3.2",
+                            "cuestion": "Preguntas relaticas a los usuarios: actividades que promueven la concientización del usuario sobre el consumo excesivo, promoviendo el uso compartido y la servitización por sobre la compra de bienes, integrando a los actores de la cadena de valor para ofrecer un servicio adaptado a las necesidades del usuario"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "5",
+            "ambito": "Consumo Responsable",
+            "temas": [
+                {
+                    "id": "5.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "5.1.1",
+                            "cuestion": "Comunicación ambiental: los consumidores están informados sobre el impacto ambiental de la actividad, promocionándose productos/servicios con el mejor desempeño ambiental"
+                        },
+                        {
+                            "id": "5.1.2",
+                            "cuestion": "Utilización del producto/servicio por parte del consumidor: de han identificado los impactos ambientales del uso de nuestros productos/servicios"
+                        },
+                        {
+                            "id": "5.1.3",
+                            "cuestion": "Utilización del producto/servicio por partde del fabricante: existen iniciativas para que los empleados adopten hábitos de consumo responsable en el lugar de trabajo"
+                        }
+                    ]
+                },
+                {
+                    "id": "5.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "5.2.1",
+                            "cuestion": "Desarrollo de nuevas soluciones por parte de la organización: se conocen cuales son las posibilidades para proponer soluciones de consumo colaborativo y participativo (costo/beneficio)"
+                        },
+                        {
+                            "id": "5.2.2",
+                            "cuestion": "Gestión eficaz de los recursos: existen iniciativas para maximizar el beneficio de los recursos que se utilizan, involucrando activamente al personal en prevenir el desperdicio de consumibles, así como limitar el comsumo de energía y agua, y recuperando los residuos resultantes de nuesta actividad"
+                        }
+                    ]
+                },
+                {
+                    "id": "5.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "5.3.1",
+                            "cuestion": "Relaciones y condiciones de trabajo: los materiales que se utilizan cumplen con las normas del código del trabajo"
+                        },
+                        {
+                            "id": "5.3.2",
+                            "cuestion": "Preguntas relativas a los consumidores: existen iniciativas que orientan las compras de los consumidores, proponiéndose soluciones de consumo participativo y colaborativo, además de fomentar el uso y consumo responsable"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "6",
+            "ambito": "Prórroga de la Duración del Uso",
+            "temas": [
+                {
+                    "id": "6.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "6.1.1",
+                            "cuestion": "Utilización de recursos sostenibles: existen iniciativas para extender el tiempo de uso de materiales no renovables, así como la reutilización de procutos usados"
+                        },
+                        {
+                            "id": "6.1.2",
+                            "cuestion": "Gestión sostenible de los recusos: existen iniciativas para aumentar la duración del uso de los productos, retrasando su fecha de caducidad y promoviendo su escalabilidad/madulación"
+                        }
+                    ]
+                },
+                {
+                    "id": "6.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "6.2.1",
+                            "cuestion": "Palancas de desarrollo para la organización: se han identificado y valorizado las posibilidades para proponer iniciativas de reparación, mantenimiento y reutilización de productos, integrando el costo de reparación en el precio de venta y promoviendo el intercambio entre consumidores"
+                        },
+                        {
+                            "id": "6.2.2",
+                            "cuetion": "Gestión eficaz de los recursos: en nuestra política de compras, cuál es la correlación entre la amortización y las formas de extender la duración de uso?"
+                        }
+                    ]
+                },
+                {
+                    "id": "6.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "6.3.1",
+                            "cuestion": "Desarrollo de competencias locales: existen iniciativas para fomentar la formación de las organizaciones vecinas de nuestros productos, incluyendo además organizaciones sociales"
+                        },
+                        {
+                            "id": "6.3.2",
+                            "cuestion": "Preguntas relativas a los comsumidores: existen iniciativas para que el consumidor conozca las formas de reparar y mantener los productos"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "7",
+            "ambito": "Gestión Eficiente de Materiales o Productos al Final de su Vida Útil",
+            "temas": [
+                {
+                    "id": "7.1",
+                    "tema": "Ambiental",
+                    "cuestiones": [
+                        {
+                            "id": "7.1.1",
+                            "cuestion": "Reducción de residuos finales: existen iniciativas para cumplir con la jerarquía de gestión de residuos, movilizando otros ámbitos de la economía circular para minimizar la producción de desperdicios finales e identificándose la proprción de materila reciclable y/o recuperable en la cadena de valor"
+                        },
+                        {
+                            "id": "7.1.2",
+                            "cuestion": "Caracterización de residuos: se han identificado las cantidades, costos, riesgos y toxicidad potencial para el hombre y el entorno natural de los residuos generados"
+                        },
+                        {
+                            "id": "7.1.3",
+                            "cuestion": "Recogida, gestión y tratamiento de residuos: existen iniciativas que garantiza que los productos y servicios van a la ruta de recogida y tratamiento adecuado, valiéndose de nuevas tecnologías de tratamiento y midiéndose su impacto ambiental"
+                        },
+                        {
+                            "id": "7.1.4",
+                            "cuestion": "Reciclaje y valorización de materiales: existen iniciativas distintas del reciclaje de materiales (compostaje, reutilización de aguas residuales, etc)"
+                        }
+                    ]
+                },
+                {
+                    "id": "7.2",
+                    "tema": "Económico",
+                    "cuestiones": [
+                        {
+                            "id": "7.2.1",
+                            "cuestion": "Creación o consolidación de rutas de gestión: se han identificado las vías de recogida/tratamiento existentes, asociando su costo/beneficio y sus normativas"
+                        }
+                    ]
+                },
+                {
+                    "id": "7.3",
+                    "tema": "Social",
+                    "cuestiones": [
+                        {
+                            "id": "7.3.1",
+                            "cuestion": "Desarrollo de procesos que crean valor social: se han identificado las oportunidades para mantener los materiales en la región, mediante regulaciones que garantizan compatibilidad con las políticas de desarrollo sostenible, involucrando habilidades y caparacidades profesionales"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

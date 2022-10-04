@@ -7,10 +7,10 @@ import Button from '../UI/Button'
 const Producto = ({ item }) => {
 
     return (
-        <Card className='w-300 relative'>
-            <img className='absolute top-0 left-0 rounded-t h-200' src={item.image} 
+        <Card className='flex flex-row gap-10'>
+            <img className='rounded-t h-200' src={item.image} 
                 alt={item.residuo} />
-            <div className='mt-200'>
+            <div className=''>
                 <p>residuo: {item.residuo}</p>
                 <p>contenedor: {item.contenedor}</p>
                 <p>cantidad: {item.kilos}</p>

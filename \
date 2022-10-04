@@ -43,20 +43,21 @@ const Marketplace = () => {
             return
         }
 
-        if (!isLoading) {
-            const searchedProduct = data.find(prod => prod.residuo === residuo)
-            if (searchedProduct === undefined || searchedProduct === null) {
-                setIsError(true)
-                setDisplayErrorMessage(`El residuo ${residuo} no se encuentra`)
-                return
-            }
+        if (!isLoading){
+            console.log(data)
+        }
+        const searchedProduct = data.find(prod => prod.residuo === residuo)
+        if (searchedProduct === undefined || searchedProduct === null) {
+            setIsError(true)
+            setDisplayErrorMessage(`El residuo ${residuo} no se encuentra`)
+            return
+        }
 
-            const searchedContainer = data.find(prod => prod.contenedor === contenedor)
-            if (searchedContainer === undefined || searchedContainer === null) {
-                setDisplayErrorMessage('El residuo se encuentra pero no en el envase o contenedor que buscas. Creemos que los siguientes contenedores te podrían interesar')
+        const searchedContainer = data.find(prod => prod.contenedor === contenedor)
+        if (searchedContainer === undefined || searchedContainer === null) {
+            setDisplayErrorMessage('El residuo se encuentra pero no en el envase o contenedor que buscas. Creemos que los siguientes contenedores te podrían interesar')
 
-                setDisplaySearch(true)
-            }
+            setDisplaySearch(true)
         }
     }
 
@@ -110,8 +111,8 @@ const Marketplace = () => {
                         <p className='text-xl pl-20 pr-40'>
                             {displayErrorMessage}
                         </p>}
-                    {!isError && displaySearch && !isLoading && 
-                        <Productos items={data} />}
+                    {!isError && displaySearch &&
+                        <Productos items={[]} />}
                 </>
             </div>
         </div>

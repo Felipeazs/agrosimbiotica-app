@@ -5,6 +5,7 @@ import Button from './UI/Button'
 import publicaciones from '../data/publicaciones.json'
 
 const Publicaciones = () => {
+    
     const navigate = useNavigate()
 
     return (
@@ -20,6 +21,7 @@ const Publicaciones = () => {
                         className="shape-fill"></path>
                 </svg>
             </div>
+
             <div className="container pb-40">
                 <p className="text-4xl pb-10">Últimas Publicaciones</p>
                 <div className="flex flex-row justify-center gap-20">
@@ -49,6 +51,7 @@ const Publicaciones = () => {
                     ))}
                 </div>
             </div>
+                
         </div>
     )
 }

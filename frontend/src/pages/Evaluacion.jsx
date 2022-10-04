@@ -95,13 +95,13 @@ const Evaluacion = () => {
             tipos: new Set(tipos),
             region: region,
         }
-        console.log(evaluacion)
         setSuccess(true)
         window.scroll(0, 0)
     }
 
     return (
         <div className="container text-white py-40">
+
             <div className="flex flex-row h-1000 border rounded-md">
                 <div className="w-1/2 relative z-0">
                     <img
@@ -130,8 +130,15 @@ const Evaluacion = () => {
                 </div>
 
                 <div className="w-full mt-20 pl-20">
-                    {success && <p className='text-black font-black text-4xl text-center p-40'>
-                        Sus datos han sido ingresados con éxito!!</p>}
+
+                    {success &&
+                        <>
+                            <p className='text-black font-black text-4xl text-center p-40'>
+                                Sus datos han sido ingresados con éxito!!
+                            </p>
+                        </>
+                    }
+
                     {!success && (
                         <>
                             <p className="text-black font-black text-2xl">Rubro</p>
@@ -145,6 +152,7 @@ const Evaluacion = () => {
                                         <p>Cultivo de plantas</p>
                                         <PlantIcon />
                                     </ButtonCard>
+
                                     <ButtonCard
                                         mode="button"
                                         id="alimentos"
@@ -152,6 +160,7 @@ const Evaluacion = () => {
                                         <p>Procesamiento de alimentos</p>
                                         <FoodIcon />
                                     </ButtonCard>
+
                                     <ButtonCard
                                         mode="button"
                                         id="bebidas sin alcohol"
@@ -159,6 +168,7 @@ const Evaluacion = () => {
                                         <p>Fabr. de bebidas no alcohólicas</p>
                                         <BottleIcon />
                                     </ButtonCard>
+
                                     <ButtonCard
                                         mode="button"
                                         id="bebidas con alcohol"
@@ -166,6 +176,7 @@ const Evaluacion = () => {
                                         <p>Fabr. de bebidas alcohólicas</p>
                                         <BeerIcon />
                                     </ButtonCard>
+
                                     <ButtonCard
                                         mode="button"
                                         id="otra"
@@ -184,6 +195,7 @@ const Evaluacion = () => {
                                         <p>Líquidos</p>
                                         <LiquidIcon />
                                     </ButtonCard>
+
                                     <ButtonCard
                                         mode="button"
                                         id="sólidos"
@@ -191,6 +203,7 @@ const Evaluacion = () => {
                                         <p>Sólidos</p>
                                         <SolidIcon />
                                     </ButtonCard>
+
                                 </div>
 
                                 <p className="text-black font-black text-2xl">Región del país</p>

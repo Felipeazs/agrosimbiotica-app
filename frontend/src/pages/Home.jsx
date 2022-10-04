@@ -11,6 +11,7 @@ const Home = () => {
             <Hero />
             <main className="flex flex-col justify-around text-white ">
                 <div className="bg-back5 object-cover">
+
                     <div className="custom-shape-divider-top-1663882523 mt-20">
                         <svg
                             data-name="Layer 1"
@@ -67,6 +68,7 @@ const Home = () => {
                 <Contacto />
                 <Publicaciones />
                 <Exito />
+                
             </main>
         </div>
     )

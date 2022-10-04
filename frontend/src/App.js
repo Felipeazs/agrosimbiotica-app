@@ -7,6 +7,7 @@ import Blog from './pages/Blog'
 import Evaluacion from './pages/Evaluacion'
 import Marketplace from './pages/Marketplace'
 import BlogDetails from './pages/BlogDetails'
+import Diagnostico from './pages/Diagnostico'
 
 //styles
 import './App.css'
@@ -36,6 +37,10 @@ function App() {
                     <Route
                         path="/evaluacion"
                         element={<Evaluacion />}
+                    />
+                    <Route
+                        path="/diagnostico"
+                        element={<Diagnostico />}
                     />
                     <Route
                         path="/marketplace"
