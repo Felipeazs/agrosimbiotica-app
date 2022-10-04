@@ -61,10 +61,8 @@ const Chart = ({ puntosRadar }) => {
                 }
             }
         }
-
         setData(arr)
-        console.log(data)
-        console.log(dataChart)
+
     }, [puntosRadar])
 
 
@@ -98,7 +96,7 @@ const Chart = ({ puntosRadar }) => {
                 data: [data[0], data[1], data[2]],
                 fill: true,
                 backgroundColor: 'rgb(57, 0, 153, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(57, 0, 153, 0.4)',
                 borderWidth: 2,
             },
             {
@@ -106,7 +104,7 @@ const Chart = ({ puntosRadar }) => {
                 data: [Number.NaN, Number.NaN, Number.NaN, data[3], data[4], data[5]],
                 fill: true,
                 backgroundColor: 'rgb(255, 84, 0, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(255, 84, 0, 0.4)',
                 borderWidth: 2,
             },
             {
@@ -114,7 +112,7 @@ const Chart = ({ puntosRadar }) => {
                 data: [Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, data[6], data[7], data[8]],
                 fill: true,
                 backgroundColor: 'rgb(255, 189, 0, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(255, 189, 0, 0.4)',
                 borderWidth: 2,
             },
             {
@@ -122,7 +120,7 @@ const Chart = ({ puntosRadar }) => {
                 data: [Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, data[9], data[10], data[11]],
                 fill: true,
                 backgroundColor: 'rgb(158, 0, 89, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(158, 0, 89, 0.4)',
                 borderWidth: 2,
             },
             {
@@ -130,7 +128,7 @@ const Chart = ({ puntosRadar }) => {
                 data: [Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, data[12], data[13], data[14]],
                 fill: true,
                 backgroundColor: 'rgb(36, 123, 160, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(36, 123, 160, 0.4)',
                 borderWidth: 2,
             },
             {
@@ -138,7 +136,7 @@ const Chart = ({ puntosRadar }) => {
                 data: [Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, data[15], data[16], data[17]],
                 fill: true,
                 backgroundColor: 'rgb(112, 193, 179, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(112, 193, 179, 0.4)',
                 borderWidth: 2,
             },
             {
@@ -146,15 +144,11 @@ const Chart = ({ puntosRadar }) => {
                 data: [Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, Number.NaN, data[18], data[19], data[20]],
                 fill: true,
                 backgroundColor: 'rgb(244, 208, 111, 0.4)',
-                borderColor: '#18D17D',
+                borderColor: 'rgb(244, 208, 111, 0.4)',
                 borderWidth: 2,
             },
         ],
     }
-
-    console.log(puntosRadar)
-
-
 
     return (<Radar data={dataChart} options={options} redraw={true} updateMode="active" />)
 }
