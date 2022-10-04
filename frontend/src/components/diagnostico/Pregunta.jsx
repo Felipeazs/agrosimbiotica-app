@@ -1,9 +1,9 @@
 import React, { useState } from 'react'
-import uuid from 'react-uuid'
+
 import Button from '../UI/Button'
 import Card from '../UI/Card'
 
-const Pregunta = ({ preguntas, respuestas }) => {
+const Pregunta = ({ preguntas, respuestas, radar }) => {
     const [numeroAmbito, setNumeroAmbito] = useState(1)
     const [diagnostico, setDiagnostico] = useState({
         '1.1.1': '',
@@ -58,11 +58,11 @@ const Pregunta = ({ preguntas, respuestas }) => {
 
     const clickHandler = () => {
         setNumeroAmbito(prevState => prevState + 1)
-        window.scroll(0, 0)
+        // window.scroll(0, 0)
     }
     const clickBackHandler = () => {
         setNumeroAmbito(prevState => prevState - 1)
-        window.scroll(0, 0)
+        // window.scroll(0, 0)
     }
 
     const changeHandler = (event) => {
@@ -73,7 +73,122 @@ const Pregunta = ({ preguntas, respuestas }) => {
 
     const submitHandler = (event) => {
         event.preventDefault()
-        console.log(diagnostico)
+
+        const adquisiciones_sostenibles = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+        const ecodiseno = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+        const simbiosis_industrial = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+        const economia_funcional = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+        const consumo_responsable = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+        const prorroga_uso = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+        const gestion_eficiente = [
+            { ambiental: [] },
+            { economico: [] },
+            { social: [] }
+        ]
+
+        for (let res in diagnostico) {
+            const ambito = res.substring(0, 3)
+
+            switch (ambito) {
+                case "1.1":
+                    let ambiental = adquisiciones_sostenibles[0].ambiental
+                    ambiental.push(diagnostico[res])
+                    break
+                case "1.2":
+                    adquisiciones_sostenibles[1].economico.push(diagnostico[res])
+                    break
+                case "1.3":
+                    adquisiciones_sostenibles[2].social.push(diagnostico[res])
+                    break
+                case "2.1":
+                    ecodiseno[0].ambiental.push(diagnostico[res])
+                    break
+                case "2.2":
+                    ecodiseno[1].economico.push(diagnostico[res])
+                    break
+                case "2.3":
+                    ecodiseno[2].social.push(diagnostico[res])
+                    break
+                case "3.1":
+                    simbiosis_industrial[0].ambiental.push(diagnostico[res])
+                    break
+                case "3.2":
+                    simbiosis_industrial[1].economico.push(diagnostico[res])
+                    break
+                case "3.3":
+                    simbiosis_industrial[2].social.push(diagnostico[res])
+                    break
+                case "4.1":
+                    economia_funcional[0].ambiental.push(diagnostico[res])
+                    break
+                case "4.2":
+                    economia_funcional[1].economico.push(diagnostico[res])
+                    break
+                case "4.3":
+                    economia_funcional[2].social.push(diagnostico[res])
+                    break
+                case "5.1":
+                    consumo_responsable[0].ambiental.push(diagnostico[res])
+                    break
+                case "5.2":
+                    consumo_responsable[1].economico.push(diagnostico[res])
+                    break
+                case "5.3":
+                    consumo_responsable[2].social.push(diagnostico[res])
+                    break
+                case "6.1":
+                    prorroga_uso[0].ambiental.push(diagnostico[res])
+                    break
+                case "6.2":
+                    prorroga_uso[1].economico.push(diagnostico[res])
+                    break
+                case "6.3":
+                    prorroga_uso[2].social.push(diagnostico[res])
+                    break
+                case "7.1":
+                    gestion_eficiente[0].ambiental.push(diagnostico[res])
+                    break
+                case "7.2":
+                    gestion_eficiente[1].economico.push(diagnostico[res])
+                    break
+                case "7.3":
+                    gestion_eficiente[2].social.push(diagnostico[res])
+                    break
+                default:
+                    break
+            }
+        }
+
+
+        const puntosRadar = {
+            adquisiciones_sostenibles, ecodiseno, simbiosis_industrial, economia_funcional,
+            consumo_responsable, prorroga_uso, gestion_eficiente
+        }
+        radar(puntosRadar)
     }
 
     const ambitos = preguntas.ambitos.map((a, i) => {
@@ -86,7 +201,7 @@ const Pregunta = ({ preguntas, respuestas }) => {
                         return (
                             <Card key={t.id} className='bg-slate-200'>
                                 <p className='text-xl'>Tema: {t.tema}</p>
-                                {t.cuestiones.map((c, ci) => {
+                                {t.cuestiones.map((c) => {
                                     return (
                                         <Card key={c.id} className='bg-white'>
                                             <p>Cuestión {c.id} - {c.cuestion}</p>
@@ -108,7 +223,6 @@ const Pregunta = ({ preguntas, respuestas }) => {
 
             )
         }
-        return
     })
 
     return (
@@ -120,7 +234,7 @@ const Pregunta = ({ preguntas, respuestas }) => {
                     {numeroAmbito > 1 && <Button type='button' title='Ámbito anterior' clickHandler={clickBackHandler} />}
                 </div>
             )}
-            {numeroAmbito === 7 && <Button type='submit' title="finalizar" />}
+            {numeroAmbito === 7 && <Button type='submit' title="Finalizar" className='text-xl text-center' />}
         </form>
     )
 
