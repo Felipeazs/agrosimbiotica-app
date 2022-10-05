@@ -1,16 +1,8 @@
 import React from 'react'
 
-const Button = ({
-    title,
-    type,
-    textColor,
-    bgColor,
-    hoverBgColor,
-    hoverTextColor,
-    clickHandler,
-    disabled,
-    className
-}) => {
+const Button = ({ title, type, textColor, bgColor, hoverBgColor, hoverTextColor, clickHandler,
+    disabled, className }) => {
+
     let style = `border py-2 px-4 rounded-lg shadow-sm focus:outline-none focus:border-primary 
                 focus:ring-1 focus:ring-offset-sky-900`
 

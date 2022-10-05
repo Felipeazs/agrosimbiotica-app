@@ -207,36 +207,45 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
                                             <p>Cuestión {c.id} - {c.cuestion}</p>
                                             {respuestas.respuestas.map((m, i) => {
                                                 return (
-                                                    <div className='continer mx-20 p-2 flex flex-row gap-4' key={c.id + i}>
-                                                        <input type="radio" name={c.id} id={c.id + i} value={i + 1} onChange={changeHandler} />
-                                                        <label htmlFor={c.id + i}>{m}</label>
+                                                    <div className='continer mx-20 p-2 flex 
+                                                       flex-row gap-4 '
+                                                        key={c.id + i}>
+                                                        <input type="radio" name={c.id}
+                                                            id={c.id + i} value={i + 1}
+                                                            className="hover:cursor-pointer"
+                                                            onChange={changeHandler} />
+                                                        <label htmlFor={c.id + i} 
+                                                            className="hover:cursor-pointer">
+                                                            {m}</label>
                                                     </div>
-                                                )
-                                            })}
-                                        </Card>
                                     )
                                 })}
                             </Card>
                         )
                     })}
+                </Card>
+            )
+        })
+}
                 </Card >
 
-            )}
-        return null
+            )
+        }
+return null
     })
 
-    return (
-        <form onSubmit={submitHandler} className='container'>
-            {ambitos}
-            {numeroAmbito !== 7 && (
-                <div className='flex flex-row-reverse justify-between text-xl'>
-                    <Button type='button' title='Siguiente ámbito' clickHandler={clickHandler} />
-                    {numeroAmbito > 1 && <Button type='button' title='Ámbito anterior' clickHandler={clickBackHandler} />}
-                </div>
-            )}
-            {numeroAmbito === 7 && <Button type='submit' title="Finalizar" className='text-xl text-center' />}
-        </form>
-    )
+return (
+    <form onSubmit={submitHandler} className='container'>
+        {ambitos}
+        {numeroAmbito !== 7 && (
+            <div className='flex flex-row-reverse justify-between text-xl'>
+                <Button type='button' title='Siguiente ámbito' clickHandler={clickHandler} />
+                {numeroAmbito > 1 && <Button type='button' title='Ámbito anterior' clickHandler={clickBackHandler} />}
+            </div>
+        )}
+        {numeroAmbito === 7 && <Button type='submit' title="Finalizar" className='text-xl text-center' />}
+    </form>
+)
 
 }
 

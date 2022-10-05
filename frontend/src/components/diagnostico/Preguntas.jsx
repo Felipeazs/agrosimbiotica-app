@@ -6,6 +6,7 @@ import respuestas from '../../data/respuestas.json'
 
 //componentes
 import Pregunta from './Pregunta'
+import Button from '../UI/Button'
 import Chart from './Chart'
 
 
@@ -27,10 +28,20 @@ const Preguntas = () => {
         setPuntosRadar(res)
     }
 
+    const clickHandler = () => {
+        setPuntosRadar()
+    }
+
     return (
         <>
             {!puntosRadar && <Pregunta preguntas={preguntas} respuestas={respuestas} radar={resultados} />}
-            {puntosRadar && <Chart puntosRadar={puntosRadar} />}
+            {puntosRadar && (
+                <div className='container'>
+                    <Button title='Volver al diagnóstico' clickHandler={clickHandler}
+                        className='font-black text-lg' />
+                    <Chart puntosRadar={puntosRadar} />
+                </div>
+            )}
         </>
     )
 }

@@ -9,7 +9,6 @@ import Button from '../components/UI/Button'
 import Productos from '../components/productos/Productos'
 
 //data
-// import residuos from '../data/productos.json'
 import selectColectores from '../data/contenedores.json'
 
 import { getAllResiduos } from '../api/residuos-api'
@@ -26,6 +25,11 @@ const Marketplace = () => {
     const { isLoading, error, data } = useQuery(['datos'], () =>
         getAllResiduos()
     )
+
+    if (error) {
+        console.log(error.mesagge)
+        return
+    }
 
     const changeHandler = (event) => {
         setIsError(false)
