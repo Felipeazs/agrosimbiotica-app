@@ -58,11 +58,11 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
 
     const clickHandler = () => {
         setNumeroAmbito(prevState => prevState + 1)
-        // window.scroll(0, 0)
+        window.scroll(0, 0)
     }
     const clickBackHandler = () => {
         setNumeroAmbito(prevState => prevState - 1)
-        // window.scroll(0, 0)
+        window.scroll(0, 0)
     }
 
     const changeHandler = (event) => {
@@ -221,8 +221,8 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
                     })}
                 </Card >
 
-            )
-        }
+            )}
+        return null
     })
 
     return (

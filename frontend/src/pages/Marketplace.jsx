@@ -1,4 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
+import { Outlet } from 'react-router-dom'
+
 import { useQuery } from '@tanstack/react-query'
 
 //components
@@ -13,11 +15,8 @@ import selectColectores from '../data/contenedores.json'
 import { getAllResiduos } from '../api/residuos-api'
 
 const Marketplace = () => {
-    const [busqueda, setBusqueda] = useState({
-        residuo: '',
-        contenedor: '',
-    })
-    const [displaySearch, setDisplaySearch] = useState(false)
+    const [busqueda, setBusqueda] = useState({ residuo: '', contenedor: '' })
+    const [displaySearchedProducts, setDisplaySearchedProducts] = useState(false)
     const [errorMessage, setErrorMessage] = useState('')
     const [displayErrorMessage, setDisplayErrorMessage] = useState('')
     const [isError, setIsError] = useState(false)
@@ -55,7 +54,7 @@ const Marketplace = () => {
             if (searchedContainer === undefined || searchedContainer === null) {
                 setDisplayErrorMessage('El residuo se encuentra pero no en el envase o contenedor que buscas. Creemos que los siguientes contenedores te podrían interesar')
 
-                setDisplaySearch(true)
+                setDisplaySearchedProducts(true)
             }
         }
     }
@@ -63,7 +62,7 @@ const Marketplace = () => {
 
     return <div className="container py-40">
         <div className='border flex flex-col rounded'>
-            <div className='relative flex flex-row justify-between items-center p-20 bg-gray-100
+            <div className='relative flex flex-row justify-between items-center p-20 bg-fifth
                 h-24'>
 
                 <div className='w-full'>
@@ -97,22 +96,21 @@ const Marketplace = () => {
             </div>
 
             <div className='h-full'>
-                <>
-                    {!isError && displaySearch &&
-                        <p className='font-black text-2xl pt-4 pl-20'>
-                            Residuo encontrado: {residuo}
-                        </p>}
-                    {isError &&
-                        <p className='font-black text-2xl pt-4 pl-20'>
-                            {displayErrorMessage}
-                        </p>}
-                    {!isError && displaySearch &&
-                        <p className='text-xl pl-20 pr-40'>
-                            {displayErrorMessage}
-                        </p>}
-                    {!isError && displaySearch && !isLoading && 
-                        <Productos items={data} />}
-                </>
+                <Outlet />
+                {!isError && displaySearchedProducts &&
+                    <p className='font-black text-2xl pt-4 pl-20'>
+                        Residuo encontrado: {residuo}
+                    </p>}
+                {isError &&
+                    <p className='font-black text-2xl pt-4 pl-20'>
+                        {displayErrorMessage}
+                    </p>}
+                {!isError && displaySearchedProducts &&
+                    <p className='text-xl pl-20 pr-40'>
+                        {displayErrorMessage}
+                    </p>}
+                {!isError && displaySearchedProducts && !isLoading &&
+                    <Productos items={data} />}
             </div>
         </div>
 

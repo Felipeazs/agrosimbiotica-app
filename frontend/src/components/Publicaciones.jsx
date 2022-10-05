@@ -25,6 +25,7 @@ const Publicaciones = () => {
             <div className="container pb-40">
                 <p className="text-4xl pb-10">Últimas Publicaciones</p>
                 <div className="flex flex-row justify-center gap-20">
+
                     {publicaciones.data.map(p => (
                         <div
                             key={p.id}
@@ -37,6 +38,7 @@ const Publicaciones = () => {
                             <p className="text-end text-sm italic">{p.fecha}</p>
                             <p className="text-xl">{p.titulo}</p>
                             <p className="py-4">{p.bajada}</p>
+                            
                             <Button
                                 title="Ver publicación"
                                 textColor="white"

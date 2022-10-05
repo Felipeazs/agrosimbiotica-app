@@ -143,7 +143,7 @@ const Evaluacion = () => {
                         <>
                             <p className="text-black font-black text-2xl">Rubro</p>
                             <form onSubmit={submitHandler}>
-                                <div className="flex flex-row flex-wrap justify-start items-center
+                                <div className="flex flex-row flex-wrap relative justify-start items-center
                                     gap-5 text-black pb-10">
                                     <ButtonCard
                                         mode="button"

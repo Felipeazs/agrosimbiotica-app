@@ -8,6 +8,7 @@ import Evaluacion from './pages/Evaluacion'
 import Marketplace from './pages/Marketplace'
 import BlogDetails from './pages/BlogDetails'
 import Diagnostico from './pages/Diagnostico'
+import ProductoDetails from './pages/ProductoDetails'
 
 //styles
 import './App.css'
@@ -44,8 +45,11 @@ function App() {
                     />
                     <Route
                         path="/marketplace"
-                        element={<Marketplace />}
-                    />
+                        element={<Marketplace />}>
+                        <Route path="producto/:productoId"
+                            element={<ProductoDetails />}
+                            />
+                    </Route>
                 </Routes>
             </Layout>
         </Router>

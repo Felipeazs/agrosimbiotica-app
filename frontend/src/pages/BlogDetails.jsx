@@ -40,7 +40,6 @@ const BlogDetails = () => {
                 </div>
                 <p className='text-center italic'>{publicacion.autor}</p>
                 <hr />
-
             </div>
         )
     }
