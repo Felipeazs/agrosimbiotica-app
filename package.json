@@ -7,7 +7,7 @@
 	"author": "felipeazs <felipeazs@gmail.com>",
 	"license": "MIT",
 	"scripts": {
-		"start": "npm install node backend/app.js",
+		"start": "yarn --prefix node backend/app.js",
 		"server": "nodemon backend/app.js",
 		"client": "npm start --prefix frontend",
 		"dev": "concurrently \"npm run server\" \"npm run client\"",
