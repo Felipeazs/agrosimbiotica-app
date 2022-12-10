@@ -1,3 +1,4 @@
+import {useEffect} from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 //components
@@ -14,6 +15,15 @@ import ProductoDetails from './pages/ProductoDetails'
 import './App.css'
 
 function App() {
+
+    useEffect(()=>{
+        const fetching = async()=>{
+            await fetch('https://agrosimbiotica-app-production-240c.up.railway.app/api').then(res => console.log(res))
+        }
+
+        fetching()
+    }, [])
+
     return (
         <Router>
             <Layout>

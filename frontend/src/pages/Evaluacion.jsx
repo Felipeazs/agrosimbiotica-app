@@ -29,7 +29,6 @@ const Evaluacion = () => {
 
     useEffect(() => {
         window.scroll(0, 0)
-
     }, [])
 
     const onClickSelectRubro = rubro => {
