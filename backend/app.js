@@ -6,7 +6,9 @@ require('dotenv').config();
 const PORT = process.env.PORT || 8000;
 
 const app = express();
-app.use(cors())
+app.use(cors({
+    origin: ['http:localhols:3000']
+}))
 
 app.get('/api', (req, res, next) => {
 	console.log('Hello World!');
