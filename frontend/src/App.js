@@ -23,7 +23,7 @@ function App() {
             await fetch(`${baseUrl}/api`)
                 .then(res => res.json())
                 .then(res => console.log(res))
-                .catch(err => console.log(err))
+                .catch(err => console.log(err.message))
         }
 
         fetching()
