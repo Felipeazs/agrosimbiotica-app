@@ -191,61 +191,104 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
         radar(puntosRadar)
     }
 
-    const ambitos = preguntas.ambitos.map((a, i) => {
+    console.log(preguntas.ambitos[2])
 
-        if (numeroAmbito === i + 1) {
-            return (
-                <Card key={a.id} className='container'>
-                    <p className='underline text-2xl'>Ámbito: {a.ambito}</p>
-                    {a.temas.map((t) => {
-                        return (
-                            <Card key={t.id} className='bg-slate-200'>
-                                <p className='text-xl'>Tema: {t.tema}</p>
-                                {t.cuestiones.map((c) => {
-                                    return (
-                                        <Card key={c.id} className='bg-white'>
-                                            <p>Cuestión {c.id} - {c.cuestion}</p>
-                                            {respuestas.respuestas.map((m, i) => {
-                                                return (
-                                                    <div className='continer mx-20 p-2 flex 
+    // ESTE RETORNO ES PARA TODOS LOS AMBITOS 
+    // const ambitos = preguntas.ambitos.map((a, i) => {
+    //     if (numeroAmbito === i + 1) {
+    //         return (
+    //             <Card key={a.id} className='container'>
+    //                 <p className='underline text-2xl'>Ámbito: {a.ambito}</p>
+    //                 {a.temas.map((t) => {
+    //                     return (
+    //                         <Card key={t.id} className='bg-slate-200'>
+    //                             <p className='text-xl'>Tema: {t.tema}</p>
+    //                             {t.cuestiones.map((c) => {
+    //                                 return (
+    //                                     <Card key={c.id} className='bg-white'>
+    //                                         <p>Cuestión {c.id} - {c.cuestion}</p>
+    //                                         {respuestas.respuestas.map((m, i) => {
+    //                                             return (
+    //                                                 <div className='continer mx-20 p-2 flex 
+    //                                                    flex-row gap-4 '
+    //                                                     key={c.id + i}>
+    //                                                     <input type="radio" name={c.id}
+    //                                                         id={c.id + i} value={i + 1}
+    //                                                         className="hover:cursor-pointer"
+    //                                                         onChange={changeHandler} />
+    //                                                     <label htmlFor={c.id + i}
+    //                                                         className="hover:cursor-pointer">
+    //                                                         {m}</label>
+    //                                                 </div>
+    //                                             )
+    //                                         })}
+    //                                     </Card>
+    //                                 )
+    //                             })}
+    //                         </Card>
+    //                     )
+    //                 })
+    //                 }
+    //             </Card >
+    //
+    //         )
+    //     }
+    //     return null
+    // })
+
+
+    const si = preguntas.ambitos[2]
+    const ambitos = (
+        <Card key={si.id} className='container'>
+            <p className='underline text-2xl'>Ámbito: {si.ambito}</p>
+            {si.temas.map((t) => {
+                return (
+                    <Card key={t.id} className='bg-slate-200'>
+                        <p className='text-xl'>Tema: {t.tema}</p>
+                        {t.cuestiones.map((c) => {
+                            return (
+                                <Card key={c.id} className='bg-white'>
+                                    <p>Cuestión {c.id} - {c.cuestion}</p>
+                                    {respuestas.respuestas.map((m, i) => {
+                                        return (
+                                            <div className='continer mx-20 p-2 flex 
                                                        flex-row gap-4 '
-                                                        key={c.id + i}>
-                                                        <input type="radio" name={c.id}
-                                                            id={c.id + i} value={i + 1}
-                                                            className="hover:cursor-pointer"
-                                                            onChange={changeHandler} />
-                                                        <label htmlFor={c.id + i} 
-                                                            className="hover:cursor-pointer">
-                                                            {m}</label>
-                                                    </div>
-                                    )
-                                })}
-                            </Card>
-                        )
-                    })}
-                </Card>
-            )
-        })
-}
-                </Card >
+                                                key={c.id + i}>
+                                                <input type="radio" name={c.id}
+                                                    id={c.id + i} value={i + 1}
+                                                    className="hover:cursor-pointer"
+                                                    onChange={changeHandler} />
+                                                <label htmlFor={c.id + i}
+                                                    className="hover:cursor-pointer">
+                                                    {m}</label>
+                                            </div>
+                                        )
+                                    })}
+                                </Card>
+                            )
+                        })}
+                    </Card>
+                )
+            })
+            }
+        </Card >)
 
-            )
-        }
-return null
-    })
 
-return (
-    <form onSubmit={submitHandler} className='container'>
-        {ambitos}
-        {numeroAmbito !== 7 && (
-            <div className='flex flex-row-reverse justify-between text-xl'>
-                <Button type='button' title='Siguiente ámbito' clickHandler={clickHandler} />
-                {numeroAmbito > 1 && <Button type='button' title='Ámbito anterior' clickHandler={clickBackHandler} />}
-            </div>
-        )}
-        {numeroAmbito === 7 && <Button type='submit' title="Finalizar" className='text-xl text-center' />}
-    </form>
-)
+
+    return (
+        <form onSubmit={submitHandler} className='container'>
+            {ambitos}
+            {/*{numeroAmbito !== 7 && (
+                <div className='flex flex-row-reverse justify-between text-xl'>
+                    <Button type='button' title='Siguiente ámbito' clickHandler={clickHandler} />
+                    {numeroAmbito > 1 && <Button type='button' title='Ámbito anterior' clickHandler={clickBackHandler} />}
+                </div>
+            )}
+            {numeroAmbito === 7 && <Button type='submit' title="Finalizar" className='text-xl text-center' />}
+            */}
+            <Button type='submit' title="Finalizar" className='text-xl text-center' />
+        </form>
+    )
 
 }
 

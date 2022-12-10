@@ -9,12 +9,10 @@ import Pregunta from './Pregunta'
 import Button from '../UI/Button'
 import Chart from './Chart'
 
-
 const Preguntas = () => {
     const [puntosRadar, setPuntosRadar] = useState()
 
     const resultados = (res) => {
-        console.log(res)
 
         for (let i in res) {
             for (let a of res[i]) {

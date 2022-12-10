@@ -1,22 +1,24 @@
-import { useEffect } from 'react'
+import React, { useEffect, Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 //components
 import Layout from './components/UI/Layout'
 import Home from './pages/Home'
-import Blog from './pages/Blog'
-import Evaluacion from './pages/Evaluacion'
-import Marketplace from './pages/Marketplace'
-import BlogDetails from './pages/BlogDetails'
-import Diagnostico from './pages/Diagnostico'
-import ProductoDetails from './pages/ProductoDetails'
 
 //styles
 import './App.css'
 
-function App() {
+const Blog = React.lazy(() => import('./pages/Blog'))
+const Evaluacion = React.lazy(() => import('./pages/Evaluacion'))
+const Marketplace = React.lazy(() => import('./pages/Marketplace'))
+const BlogDetails = React.lazy(() => import('./pages/BlogDetails'))
+const Diagnostico = React.lazy(() => import('./pages/Diagnostico'))
+const ProductoDetails = React.lazy(() => import('./pages/ProductoDetails'))
 
-    const baseUrl = process.env.REACT_APP_BASE_URL
+const ENV = process.env.REACT_APP_NODE_ENV
+const baseUrl = ENV === 'production' ? 'https://agrosimbiotica-app-production-240c.up.railway.app' : 'http://localhost:5001'
+
+function App() {
 
     useEffect(() => {
         const fetching = async () => {
@@ -27,7 +29,7 @@ function App() {
         }
 
         fetching()
-    }, [baseUrl])
+    }, [])
 
     return (
         <Router>
