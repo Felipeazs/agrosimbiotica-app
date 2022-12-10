@@ -16,7 +16,7 @@ import './App.css'
 
 function App() {
 
-    const baseUrl = process.env.REACTS_APP_BASE_URL
+    const baseUrl = process.env.REACT_APP_BASE_URL
 
     useEffect(() => {
         const fetching = async () => {
