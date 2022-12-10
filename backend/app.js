@@ -5,11 +5,11 @@ require('dotenv').config();
 
 const PORT = process.env.PORT || 8000;
 const ENV = process.env.NODE_ENV
-const origin = ENV === 'production' ? process.env.ORIGIN : 'http://localhost:3000'
+const origins = ENV === 'production' ? process.env.ORIGIN : 'http://localhost:3000'
 
 const app = express();
 app.use(cors({
-    origin: [origin]
+    origin: [origins]
 }))
 
 app.get('/api', (req, res, next) => {
@@ -30,5 +30,6 @@ app.get('/api', (req, res, next) => {
 // }
 
 app.listen(PORT, () => {
+    console.log('env:', ENV)
     console.log(`Listening on port ${PORT}`);
 });
