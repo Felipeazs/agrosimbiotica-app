@@ -16,7 +16,7 @@ const Diagnostico = React.lazy(() => import('./pages/Diagnostico'))
 const ProductoDetails = React.lazy(() => import('./pages/ProductoDetails'))
 
 const ENV = process.env.REACT_APP_NODE_ENV
-const baseUrl = ENV === 'production' ? 'https://agrosimbiotica-app-production-240c.up.railway.app' : 'http://localhost:5001'
+const baseUrl = ENV === 'production' ? process.env.REACT_APP_BASE_URL : 'http://localhost:5001'
 
 function App() {
 
@@ -32,44 +32,46 @@ function App() {
     }, [])
 
     return (
-        <Router>
-            <Layout>
-                <Routes>
-                    <Route
-                        path="/"
-                        element={<Home />}
-                    />
-                    <Route
-                        path="/inicio"
-                        element={<Home />}
-                    />
-                    <Route
-                        path="/blog"
-                        element={<Blog />}>
+        <Suspense>
+            <Router>
+                <Layout>
+                    <Routes>
                         <Route
-                            path=":blogId"
-                            element={<BlogDetails />}
+                            path="/"
+                            element={<Home />}
                         />
-                    </Route>
+                        <Route
+                            path="/inicio"
+                            element={<Home />}
+                        />
+                        <Route
+                            path="/blog"
+                            element={<Blog />}>
+                            <Route
+                                path=":blogId"
+                                element={<BlogDetails />}
+                            />
+                        </Route>
 
-                    <Route
-                        path="/evaluacion"
-                        element={<Evaluacion />}
-                    />
-                    <Route
-                        path="/diagnostico"
-                        element={<Diagnostico />}
-                    />
-                    <Route
-                        path="/marketplace"
-                        element={<Marketplace />}>
-                        <Route path="producto/:productoId"
-                            element={<ProductoDetails />}
+                        <Route
+                            path="/evaluacion"
+                            element={<Evaluacion />}
                         />
-                    </Route>
-                </Routes>
-            </Layout>
-        </Router>
+                        <Route
+                            path="/diagnostico"
+                            element={<Diagnostico />}
+                        />
+                        <Route
+                            path="/marketplace"
+                            element={<Marketplace />}>
+                            <Route path="producto/:productoId"
+                                element={<ProductoDetails />}
+                            />
+                        </Route>
+                    </Routes>
+                </Layout>
+            </Router>
+        </Suspense>
     )
 }
 
