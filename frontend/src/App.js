@@ -21,6 +21,7 @@ const baseUrl = ENV === 'production' ? process.env.REACT_APP_BASE_URL : 'http://
 function App() {
 
     useEffect(() => {
+        console.log('baseURL:', baseUrl)
         const fetching = async () => {
             await fetch(`${baseUrl}/api`)
                 .then(res => res.json())

@@ -83,7 +83,7 @@ function webGreenWidget() {
     var widgetText
     let BadgetHoverBox = document.getElementById('badget-hover-box')
 
-    document.getElementById('badget').addEventListener('click', function () {
+    document.getElementById('badget').addEventListener('click', function() {
         if (badgetAnimating) {
             return
         }
@@ -237,19 +237,19 @@ function webGreenWidget() {
             setText(!responseData.language ? 'en' : responseData.language)
 
             if (active === 'false') {
-                setTimeout(function () {
+                setTimeout(function() {
                     InactiveWidgetToolTipCss(0)
                     badgetAnimation = setInterval(badgetToolTipFadeIn, 10)
                 }, 3000)
-                setTimeout(function () {
+                setTimeout(function() {
                     badgetAnimation = setInterval(badgetToolTipFadeOut, 10)
-                    document.getElementById('badget').addEventListener('mouseenter', function () {
+                    document.getElementById('badget').addEventListener('mouseenter', function() {
                         InactiveWidgetToolTipCss(1)
                         {
                             leaf.src = `${IMG_URL}icon-info.svg`
                         }
                     })
-                    document.getElementById('badget').addEventListener('mouseleave', function () {
+                    document.getElementById('badget').addEventListener('mouseleave', function() {
                         BadgetHoverBox.style.cssText = ''
                         BadgetHoverBox.innerHTML = ''
                         {
@@ -258,19 +258,19 @@ function webGreenWidget() {
                     })
                 }, 5000)
             } else {
-                setTimeout(function () {
+                setTimeout(function() {
                     WidgetToolTipCss(0)
                     badgetAnimation = setInterval(badgetToolTipFadeIn, 10)
                 }, 3000)
-                setTimeout(function () {
+                setTimeout(function() {
                     badgetAnimation = setInterval(badgetToolTipFadeOut, 10)
-                    document.getElementById('badget').addEventListener('mouseenter', function () {
+                    document.getElementById('badget').addEventListener('mouseenter', function() {
                         WidgetToolTipCss(1)
                         if (!badgetOpened) {
                             leaf.src = `${IMG_URL}icon-info.svg`
                         }
                     })
-                    document.getElementById('badget').addEventListener('mouseleave', function () {
+                    document.getElementById('badget').addEventListener('mouseleave', function() {
                         BadgetHoverBox.style.cssText = ''
                         BadgetHoverBox.innerHTML = ''
                         if (!badgetOpened) {
