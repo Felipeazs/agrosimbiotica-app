@@ -30,6 +30,7 @@ app.get('/api', (req, res, next) => {
 // }
 
 app.listen(PORT, () => {
+    console.log('origin:', origins)
     console.log('env:', ENV)
     console.log(`Listening on port ${PORT}`);
 });
