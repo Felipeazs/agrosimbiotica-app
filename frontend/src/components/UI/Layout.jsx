@@ -7,11 +7,13 @@ import Footer from './Footer'
 const Layout = ({ children }) => {
     const { pathname } = useLocation()
 
+    const background = 'bg-main-background bg-cover h-1200'
+
     return (
         <div className="App">
             <div
                 className={`${pathname === '/inicio' || pathname === '/'
-                    ? 'bg-main-background bg-cover h-1200'
+                    ? 'bg-white'
                     : 'bg-white'
                     }
                 `}>

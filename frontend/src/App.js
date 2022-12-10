@@ -39,13 +39,13 @@ function App() {
                     <Routes>
                         <Route
                             path="/"
-                            element={<Home />}
+                            element={<Diagnostico />}
                         />
                         <Route
                             path="/inicio"
-                            element={<Home />}
+                            element={<Diagnostico />}
                         />
-                        <Route
+                        {/*<Route
                             path="/blog"
                             element={<Blog />}>
                             <Route
@@ -69,6 +69,7 @@ function App() {
                                 element={<ProductoDetails />}
                             />
                         </Route>
+                        */}
                     </Routes>
                 </Layout>
             </Router>
