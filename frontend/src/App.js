@@ -18,7 +18,7 @@ function App() {
 
     useEffect(()=>{
         const fetching = async()=>{
-            await fetch('https://agrosimbiotica-app-production-240c.up.railway.app/api').then(res => console.log(res))
+            await fetch('https://agrosimbiotica-app-production-240c.up.railway.app/api').then(res => console.log(res)).catch(err => console.log(err))
         }
 
         fetching()
