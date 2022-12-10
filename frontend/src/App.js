@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+import { useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 //components
@@ -16,13 +16,18 @@ import './App.css'
 
 function App() {
 
-    useEffect(()=>{
-        const fetching = async()=>{
-            await fetch('https://agrosimbiotica-app-production-240c.up.railway.app/api').then(res => console.log(res)).catch(err => console.log(err))
+    const baseUrl = process.env.REACTS_APP_BASE_URL
+
+    useEffect(() => {
+        const fetching = async () => {
+            await fetch(`${baseUrl}/api`)
+                .then(res => res.json())
+                .then(res => console.log(res))
+                .catch(err => console.log(err))
         }
 
         fetching()
-    }, [])
+    }, [baseUrl])
 
     return (
         <Router>
@@ -58,7 +63,7 @@ function App() {
                         element={<Marketplace />}>
                         <Route path="producto/:productoId"
                             element={<ProductoDetails />}
-                            />
+                        />
                     </Route>
                 </Routes>
             </Layout>

@@ -10,8 +10,7 @@
 		"start": "yarn --prefix node backend/app.js",
 		"server": "nodemon backend/app.js",
 		"client": "npm start --prefix frontend",
-		"dev": "concurrently \"npm run server\" \"npm run client\"",
-		"heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+		"dev": "concurrently \"npm run server\" \"npm run client\""
 	},
 	"dependencies": {
 		"concurrently": "^7.4.0",
