@@ -31,6 +31,9 @@ html {
 body {
     background-color: #000000;
 }
+p {
+    font-size: 1.1rem;
+}
 
 .active {
     text-decoration: underline rgb(63, 61, 86) 4px;
