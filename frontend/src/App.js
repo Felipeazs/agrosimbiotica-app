@@ -3,17 +3,17 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 //components
 import Layout from './components/UI/Layout'
-import Home from './pages/Home'
+// import Home from './pages/Home'
 
 //styles
 import './App.css'
 
-const Blog = React.lazy(() => import('./pages/Blog'))
-const Evaluacion = React.lazy(() => import('./pages/Evaluacion'))
-const Marketplace = React.lazy(() => import('./pages/Marketplace'))
-const BlogDetails = React.lazy(() => import('./pages/BlogDetails'))
+// const Blog = React.lazy(() => import('./pages/Blog'))
+// const Evaluacion = React.lazy(() => import('./pages/Evaluacion'))
+// const Marketplace = React.lazy(() => import('./pages/Marketplace'))
+// const BlogDetails = React.lazy(() => import('./pages/BlogDetails'))
+// const ProductoDetails = React.lazy(() => import('./pages/ProductoDetails'))
 const Diagnostico = React.lazy(() => import('./pages/Diagnostico'))
-const ProductoDetails = React.lazy(() => import('./pages/ProductoDetails'))
 
 const ENV = process.env.REACT_APP_NODE_ENV
 const baseUrl = ENV === 'production' ? process.env.REACT_APP_BASE_URL : 'http://localhost:5001'
