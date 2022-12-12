@@ -329,11 +329,11 @@ const FormularioGeneral = () => {
             <Card>
                 <h1>DATOS GENERALES DE LA EMPRESA</h1>
                 <Card className="container">
-                    <Input label="¿En qué región opera la empresa?" type="select" option="selecciona una región" name="region" items={options} onSelectChange={inputHandler} className="w-1/2" />
+                    <Input label="¿En qué región opera la empresa?" type="select" option="selecciona una región" name="region" items={options} onSelectChange={inputHandler} className="w-full" />
                 </Card>
                 <Card className="container flex flex-col">
                     <div className="flex flex-row items-end gap-5">
-                        <Input label="cuáles son los productos principales que ofrece la empresa" placeholder="ingresa el producto" type="text" name="producto" value={producto} onInputChange={productoChangeHandler} className="w-1/2" />
+                        <Input label="cuáles son los productos principales que ofrece la empresa" placeholder="ingresa el producto" type="text" name="producto" value={producto} onInputChange={productoChangeHandler} className="w-full" />
                         <Button title="agregar" type="button" name="productos" clickHandler={productosHandler} />
                     </div>
                     <ul>
@@ -341,7 +341,7 @@ const FormularioGeneral = () => {
                     </ul>
                 </Card>
                 <Card className="container">
-                    <Input label="¿Cuál es el rubro de la empresa?" type="radio" name="rubro" items={rubros} onRadioChange={radioHandler} className="w-1/2" />
+                    <Input label="¿Cuál es el rubro de la empresa?" type="radio" name="rubro" items={rubros} onRadioChange={radioHandler} className="w-full" />
                     {(rubro === 'otro_rubro' || diffrubro === false) && (
                         <div className="flex flex-row items-end gap-5 w-1/2">
                             <Input type="text" label="" name="rubro" placeholder="ingresa el rubro" onInputChange={inputHandler} className="w-full" />

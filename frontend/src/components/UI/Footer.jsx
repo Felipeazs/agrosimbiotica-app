@@ -25,10 +25,10 @@ const Footer = () => {
             className={`flex flex-col justify-between border-t ${pathname === '/' || pathname === '/inicio'
                 ? 'text-white bg-black'
                 : 'text-black bg-white'
-                } h-96 py-16`}
+                } h-full py-16`}
             id="contacto">
 
-            <div className="container flex flex-row justify-around">
+            <div className="container flex flex-row flex-wrap mx-10 justify-around">
                 <div className="w-400">
                     <form onSubmit={submitHandler}>
                         <Input
@@ -67,13 +67,13 @@ const Footer = () => {
                     <p>Política de privacidad</p>
                 </div>
             </div>
-            <div className="flex flex-row justify-around ">
-                <div className="flex flex-row  gap-4">
+            <div className="flex flex-row flex-wrap justify-around ">
+                <div className="flex flex-row flex-wrap gap-4">
                     <p className="underline">Términos y condiciones</p>
                     <p className="underline">Política de privacidad</p>
                 </div>
 
-                <div className="flex flex-row gap-4">
+                <div className="flex flex-row flex-wrap gap-4">
                     <p className="underline">
                         <a
                             href="https://www.facebook.com"
