@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Button = ({ title, type, textColor, bgColor, hoverBgColor, hoverTextColor, clickHandler,
+const Button = ({ title, type, name, value, textColor, bgColor, hoverBgColor, hoverTextColor, clickHandler,
     disabled, className }) => {
 
     let style = `border py-2 px-4 rounded-lg shadow-sm focus:outline-none focus:border-primary 
@@ -16,6 +16,8 @@ const Button = ({ title, type, textColor, bgColor, hoverBgColor, hoverTextColor,
         <div className={`py-2 ${className}`}>
             <button
                 type={type}
+                name={name}
+                value={value}
                 onClick={clickHandler}
                 disabled={disabled}
                 className={style}>

@@ -240,22 +240,6 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
     const si = preguntas.ambitos[2]
     const ambitos = (
         <Card key={si.id} className='container'>
-            <p className='text-2xl text-center px-10'>¿Sabes cómo la simbiosis industrial puede ayudar a tu empresa a mejorar su desempeño y transitar hacia la sostenibilidad? </p>
-            <br />
-            <div className='text-center'>
-                <p>
-                    La simbiosis industrial se materializa mediante la puesta en común y/o la interrelación de distintas fases productivas, de varios procesos para la fabricación de bienes o servicios específicos, con el objetivo de la gestión compartida de ciertas funciones, bienes, stocks, flujos de materiales y energía para optimizarlos.
-                </p>
-                <br />
-                <p>
-                    Esta área puede englobar sinergias de sustitución establecidas entre varios actores ecnonómicos para optimizar el uso de recursos, donde, por ejemplo, los residuos de un sector pueden convertirse en materia prima de otro. Puede también incluyen sinergias que agrupan flujos de materiales, energíá, agua, infraestructuras, bienes, o servicios para optimizar el uso de recursos.
-                </p>
-                <br />
-                <p>
-                    La proximidad geográfica puede ser un factor determinante en las interrelaciones o puestas en común para la implementación de simbiosis industrial regional o ecología industrila y regional. Enfoques de ecología industrial y regional son acciones voluntarias y colectivas que reúnen a una diversidad de actores públicos o provados con el objetivo de optimizar recursos y fomentando el anclaje de las actividades y el empleo en las regiones.
-                </p>
-                <br />
-            </div>
             {si.temas.map((t) => {
                 return (
                     <Card key={t.id} className='bg-slate-200'>
@@ -266,8 +250,7 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
                                     <p>{c.cuestion}</p>
                                     {respuestas.respuestas.map((m, i) => {
                                         return (
-                                            <div className='continer mx-2 p-2 flex 
-                                                       flex-row gap-4 '
+                                            <div className='continer mx-2 p-2 flex flex-row gap-4'
                                                 key={c.id + i}>
                                                 <input type="radio" name={c.id}
                                                     id={c.id + i} value={i + 1}

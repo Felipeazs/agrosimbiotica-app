@@ -18,6 +18,7 @@ module.exports = {
             },
             container: {
                 margin: '300px 0',
+                padding: '10rem 0',
                 center: true,
             },
             backgroundImage: {
