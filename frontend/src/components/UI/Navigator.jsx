@@ -8,14 +8,14 @@ const Navigator = () => {
 
     return (
         <nav
-            className= 'bg-oficial text-white px-20 shadow-xl fixed z-10 w-full'>
+            className= 'bg-oficial text-white px-5 md:px-20 shadow-xl fixed z-10 w-full'>
             <div className="flex flex-row justify-between items-center h-20">
                 <div className="w-full">
                     <Link to="/">
                         <img
                             src="https://res.cloudinary.com/dqm9xo01m/image/upload/v1671055667/Assets/logo2_mky4qp.png"
                             alt="logo"
-                            width="200px"
+                            className="w-80"
                         />
                     </Link>
                 </div>
