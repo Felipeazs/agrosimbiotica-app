@@ -2,8 +2,8 @@ import React from 'react'
 
 const Input = ({ label, labels, type, name, value, option, placeholder, items, onSelectChange, onInputChange, onRadioChange, onCheckChange, className }) => {
     return (
-        <div className={`flex flex-col py-2 ${className}`}>
-            <label htmlFor="">{label}</label>
+        <div className={`flex flex-col py-2 w-full ${className}`}>
+            <label htmlFor="" className="font-bold">{label}</label>
             {labels &&
                 <div className="py-5">
                     {labels.map((l, i) =>

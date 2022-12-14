@@ -16,10 +16,10 @@ const Home2 = () => {
 
     return (
         <div className="py-26 px-5 xl:px-64 2xl:px-80">
-            <Card className="container">
+            <Card className="container py-10">
                 <p className='text-2xl text-center px-10 font-bold'>¿Sabes cómo la simbiosis industrial puede ayudar a tu empresa a mejorar su desempeño y transitar hacia la sostenibilidad? </p>
                 <br />
-                <div className='text-center'>
+                <div className='text-justify px-10'>
                     <p>
                         La simbiosis industrial se materializa mediante la puesta en común y/o la interrelación de distintas fases productivas, de varios procesos para la fabricación de bienes o servicios específicos, con el objetivo de la gestión compartida de ciertas funciones, bienes, stocks, flujos de materiales y energía para optimizarlos.
                     </p>
@@ -33,7 +33,7 @@ const Home2 = () => {
                     </p>*/}
                 </div>
             </Card>
-            <Card className="container flex flex-col justify-center items-center gap-5">
+            <Card className="container py-10 flex flex-col justify-center items-center gap-5">
                 <p className="py-5 px-10 text-center">
                     Si trabajas en el área de sostenibilidad de una empresa o quieres conocer cómo tu empresa está avanzando hacia la economía circular, te invitamos a utilizar nuestras herramientas de diagnóstico basadas en la norma internacional BSI 8001:2017 
                 </p>
@@ -47,7 +47,7 @@ const Home2 = () => {
                 </div>
                 <p className="text-center py-5">Todos los datos que nos entregues serán confidenciales y el resultado sólo será enviado a tu casilla de correo.</p>
             </Card>
-                <p className="py-20 px-72 text-justify">¿Te interesa saber más de lo que puede hacer tu empresa para mejorar su desempeño ambiental, social y económico? Si quieres avanzaren la sostenibilidad en tu empresa, ya sea para diseñar la hoja de ruta que los haga transitar hacia la economía circular, buscar financiamiento para implementar iniciativas o encontrar socios estratégicos, no dudes en contactarnos a <a href="mailto:contacto@asginnobiotics" className="underline font-bold">contacto@asginnobiotics.cl</a> o a <a href="mailto:contacto@lazofoods.cl" className="underline font-bold">contacto@lazofoods.cl</a></p>
+                <p className="py-10 lg:py-20 md:px-20 text-justify">¿Te interesa saber más de lo que puede hacer tu empresa para mejorar su desempeño ambiental, social y económico? Si quieres avanzaren la sostenibilidad en tu empresa, ya sea para diseñar la hoja de ruta que los haga transitar hacia la economía circular, buscar financiamiento para implementar iniciativas o encontrar socios estratégicos, no dudes en contactarnos a <a href="mailto:contacto@asginnobiotics" className="underline font-bold">contacto@asginnobiotics.cl</a> o a <a href="mailto:contacto@lazofoods.cl" className="underline font-bold">contacto@lazofoods.cl</a></p>
         </div>
     )
 }
