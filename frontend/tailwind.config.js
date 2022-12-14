@@ -55,6 +55,7 @@ module.exports = {
                 quaternary: 'rgb(63, 61, 86)',
                 fifth: 'rgb(49, 20, 54)',
                 sixth: '#1E293B',
+                oficial: '#007B00'
             },
             height: {
                 1200: '1200px',

@@ -7,18 +7,30 @@
         font-family: 'Josefin';
         font-weight: 400;
         font-weight: normal;
-        src: url('./assets/fonts/JosefinSans-Regular.ttf');
+        src: url('./assets/fonts/Josefin/JosefinSans-Regular.ttf');
     }
     @font-face {
         font-family: 'Josefin';
         font-weight: 900;
         font-weight: black;
-        src: url('./assets/fonts/JosefinSans-Bold.ttf');
+        src: url('./assets/fonts/Josefin/JosefinSans-Bold.ttf');
+    }
+    @font-face {
+        font-family: 'Dim-Condensed';
+        font-weight: normal;
+        font-weight: 400;
+        src: url('./assets/fonts/DimCondensed/DIN-Regular.ttf');
+    }
+    @font-face {
+        font-family: 'Dim-Condensed';
+        font-weight: bold;
+        font-weight: 700;
+        src: url('./assets/fonts/DimCondensed/DIN-Bold.ttf');
     }
 }
 
 * {
-    font-family: 'Josefin', sans-serif;
+    font-family: 'Dim-Condensed', sans-serif;
 }
 
 html {

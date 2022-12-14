@@ -3,30 +3,23 @@ import { Link, NavLink } from 'react-router-dom'
 
 //logos
 const logoWhite = require('../../assets/logo/logo.png')
-const logoBlack = require('../../assets/logo/logo2.png')
 
 const Navigator = () => {
-    const { pathname } = useLocation()
-
-    const nav_style = 'bg-black/50 text-white'
 
     return (
         <nav
-            className={`${pathname === '/inicio' || pathname === '/'
-                ? 'bg-white text-black'
-                : 'bg-white text-black'
-                }  px-20 shadow-xl fixed z-10 w-full`}>
+            className= 'bg-oficial text-white px-20 shadow-xl fixed z-10 w-full'>
             <div className="flex flex-row justify-between items-center h-20">
-                <div className="w-10">
+                <div className="w-full">
                     <Link to="/">
                         <img
-                            src={pathname === '/' || pathname === '/inicio' ? logoBlack : logoBlack}
+                            src="https://res.cloudinary.com/dqm9xo01m/image/upload/v1671055667/Assets/logo2_mky4qp.png"
                             alt="logo"
-                            className="max-w-full h-auto"
+                            width="200px"
                         />
                     </Link>
                 </div>
-                <ul className="flex flex-row gap-5 text-xl">
+                <ul className="invisible md:visible flex flex-row gap-5 text-xl">
                     <li>
                         <NavLink
                             to="/inicio"
