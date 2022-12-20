@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Card = ({ children, background, shadow, mode, className, onClick}) => {
+const Card = ({ children, background, shadow, mode, className, onClick }) => {
     return (
         <div
             className={`${background} border rounded-lg ${className} 

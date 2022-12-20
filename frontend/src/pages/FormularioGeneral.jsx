@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react'
 
+import Diagnostico from './Diagnostico'
+
 import Card from '../components/UI/Card'
 import Input from '../components/UI/Input'
 import Button from '../components/UI/Button'
@@ -65,6 +67,7 @@ const respuestas_5 = [
 
 const respuestas_6 = [
     { id: 36, value: 1, nombre: 'Sí, la empresa ya está trabajando con al menos una de ellas' },
+    { id: '36b', value: 0.5, nombre: 'Sí, pero no han sido integrados' },
     { id: 37, value: 0, nombre: 'No, no se conocen en la empresa/no han sido integradas' }
 ]
 
@@ -329,11 +332,11 @@ const FormularioGeneral = () => {
             <Card>
                 <h1>DATOS GENERALES DE LA EMPRESA</h1>
                 <Card className="container">
-                    <Input label="¿En qué región opera la empresa?" type="select" option="selecciona una región" name="region" items={options} onSelectChange={inputHandler} className="w-full" />
+                    <Input label="1.- ¿En qué región opera la empresa?" type="select" option="selecciona una región" name="region" items={options} onSelectChange={inputHandler} className="w-full" />
                 </Card>
                 <Card className="container flex flex-col">
                     <div className="flex flex-row items-end gap-5">
-                        <Input label="cuáles son los productos principales que ofrece la empresa" placeholder="ingresa el producto" type="text" name="producto" value={producto} onInputChange={productoChangeHandler} className="w-full" />
+                        <Input label="2.- ¿Cuáles son los productos principales que ofrece la empresa" placeholder="ingresa el producto" type="text" name="producto" value={producto} onInputChange={productoChangeHandler} className="w-full" />
                         <Button title="agregar" type="button" name="productos" clickHandler={productosHandler} />
                     </div>
                     <ul>
@@ -341,7 +344,7 @@ const FormularioGeneral = () => {
                     </ul>
                 </Card>
                 <Card className="container">
-                    <Input label="¿Cuál es el rubro de la empresa?" type="radio" name="rubro" items={rubros} onRadioChange={radioHandler} className="w-full" />
+                    <Input label="3.- ¿Cuál es el rubro de la empresa?" type="radio" name="rubro" items={rubros} onRadioChange={radioHandler} className="w-full" />
                     {(rubro === 'otro_rubro' || diffrubro === false) && (
                         <div className="flex flex-row items-end gap-5 w-1/2">
                             <Input type="text" label="" name="rubro" placeholder="ingresa el rubro" onInputChange={inputHandler} className="w-full" />
@@ -350,7 +353,89 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Conoces las empresas que están alrededor de tu organización y cuáles son sus productos/servicios?"
+                        label="4.- ¿La empresa tiene una política de sostenibilidad?"
+                        type="radio"
+                        name="politicas_sostenibilidad"
+                        items={respuestas_2}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="5.- ¿La empresa declara en su política de sostenibilidad (u otra) alguno de los siguiente temas?:"
+                        labels={[
+                            "Adquisiciones sostenibles",
+                            "Eficiencia energética",
+                            "Eficiencia hídrica",
+                            "Simbiosis industrial",
+                            "Ecodiseño"]}
+                        type="radio"
+                        name="declaración_temas"
+                        items={respuestas_4}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="6.- ¿La empresa tiene alguna de las siguientes certificaciones?:"
+                        LABELS={[
+                            "ISO 14001:2015 - SISTEMAS DE GESTIÓN AMBIENTAL",
+                            "ISO 50001:2018 - SISTEMAS DE GESTIÓN DE LA ENERGÍA"]}
+                        type="radio"
+                        name="certificaciones"
+                        items={respuestas_5}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="7.- ¿La empresa tiene una hoja de ruta asociada a la economía circular?"
+                        type="radio"
+                        name="hoja_ruta"
+                        items={respuestas_2}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="8.- ¿Sabías que las siguientes certificaciones y estándares establecen sistemas de gestión basado en economía circular?:"
+                        labels={[
+                            "BS 8001:2017 - marco para la aplicación de los principios de la economía circular en las organizaciones",
+                            "AFNOR XP X 30-901:2018 - economía circular - sistemas de gestión de proyectos de economía circular - requisitos y directrices",
+                            "CWA 17354:2018 - simbiosis industrial"]}
+                        type="radio"
+                        name="sabias_sistemas_gestion"
+                        items={respuestas_6}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="9.- ¿La empresa ha participado de alguno de los siguientes sellos o premios?"
+                        labels={[
+                            "Premios Verdes (http://premiosverdes.org/es/)",
+                            "Premios Sustenta (http?//sustenta.utem.cl)",
+                            "Premios Cero Basura",
+                            "Empresas B",
+                            "Programa Huella Chile"]}
+                        type="radio"
+                        name="participacion_premios"
+                        items={respuestas_7}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="10.- ¿La empresa sabe lo que significa simbiosis industrial?"
+                        type="radio"
+                        name="conoce_si"
+                        items={respuestas_3}
+                        onRadioChange={radioHandler}
+                        className="w-full" />
+                </Card>
+                <Card className="container">
+                    <Input
+                        label="11.- ¿Conoces las empresas que están alrededor de tu organización y cuáles son sus productos/servicios?"
                         type="radio"
                         name="empresas_alrededor"
                         items={empresas_alrededor}
@@ -359,7 +444,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿La empresa ha colaborado con empresas cercanas intercambiando/compartiendo algún tipo de recurso (agua, energía, residuos, tecnologías, infraestructura, maquinario, etc.)?"
+                        label="12.- ¿La empresa ha colaborado con empresas cercanas intercambiando/compartiendo algún tipo de recurso (agua, energía, residuos, tecnologías, infraestructura, maquinario, etc.)?"
                         type="radio"
                         name="colaboracion_empresas"
                         items={respuesta}
@@ -379,89 +464,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿La empresa tiene una política de sostenibilidad?"
-                        type="radio"
-                        name="politicas_sostenibilidad"
-                        items={respuestas_2}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿La empresa tiene una hoja de ruta asociada a la economía circular?"
-                        type="radio"
-                        name="hoja_ruta"
-                        items={respuestas_2}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿La empresa sabe lo que significa simbiosis industrial?"
-                        type="radio"
-                        name="conoce_si"
-                        items={respuestas_3}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿La empresa declara en su política de sostenibilidad (u otra) alguno de los siguiente temas?:"
-                        labels={[
-                            "Adquisiciones sostenibles", 
-                            "Eficiencia energética", 
-                            "Eficiencia hídrica", 
-                            "Simbiosis industrial", 
-                            "Ecodiseño"]}
-                        type="radio"
-                        name="declaración_temas"
-                        items={respuestas_4}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿La empresa tiene alguna de las siguientes certificaciones?:"
-                        LABELS={[
-                            "ISO 14001:2015 - SISTEMAS DE GESTIÓN AMBIENTAL", 
-                            "ISO 50001:2018 - SISTEMAS DE GESTIÓN DE LA ENERGÍA"]}
-                        type="radio"
-                        name="certificaciones"
-                        items={respuestas_5}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿Sabías que las siguientes certificaciones y estándares establecen sistemas de gestión basado en economía circular?:"
-                        labels={[
-                            "BS 8001:2017 - marco para la aplicación de los principios de la economía circular en las organizaciones", 
-                            "AFNOR XP X 30-901:2018 - economía circular - sistemas de gestión de proyectos de economía circular - requisitos y directrices", 
-                            "CWA 17354:2018 - simbiosis industrial"]}
-                        type="radio"
-                        name="sabias_sistemas_gestion"
-                        items={respuestas_6}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿La empresa ha participado de alguno de los siguientes sellos o premios?"
-                        labels={[
-                            "Premios Verdes (http://premiosverdes.org/es/)", 
-                            "Premios Sustenta (http?//sustenta.utem.cl)", 
-                            "Premios Cero Basura", 
-                            "Empresas B", 
-                            "Programa Huella Chile"]}
-                        type="radio"
-                        name="participacion_premios"
-                        items={respuestas_7}
-                        onRadioChange={radioHandler}
-                        className="w-full" />
-                </Card>
-                <Card className="container">
-                    <Input
-                        label="¿Sábes cómo la simbiosis industrial apoya en la consecución de diversas certificaciones y sellos nacionales e internacionales?"
+                        label="13.- ¿Sábes cómo la simbiosis industrial apoya en la consecución de diversas certificaciones y sellos nacionales e internacionales?"
                         type="radio"
                         name="sabias_si_apoyo"
                         items={respuestas_8}
@@ -473,7 +476,7 @@ const FormularioGeneral = () => {
                 <h1>CONSUMOS</h1>
                 <Card className="container">
                     <Input
-                        label="¿Sábes cuánto es el consumo de energía de la empresa?"
+                        label="14.- ¿Sábes cuánto es el consumo de energía de la empresa?"
                         type="radio"
                         name="consumo_energia"
                         items={respuestas_9}
@@ -482,7 +485,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Sábes cuánto es el consumo de agua de la empresa?"
+                        label="15.- ¿Sábes cuánto es el consumo de agua de la empresa?"
                         type="radio"
                         name="consumo_agua"
                         items={respuestas_10}
@@ -491,7 +494,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Sábes cuánto es el consumo de materiales (ingredientes, insumos, secundarios) de la empresa?"
+                        label="16.- ¿Sábes cuánto es el consumo de materiales (ingredientes, insumos, secundarios) de la empresa?"
                         type="radio"
                         name="consumo_materiales"
                         items={respuestas_11}
@@ -500,7 +503,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Conoces el impacto ambiental y social que tienen los materiales que consume la empresa?"
+                        label="17.- ¿Conoces el impacto ambiental y social que tienen los materiales que consume la empresa?"
                         type="radio"
                         name="impacto_materiales"
                         items={respuestas_12}
@@ -512,7 +515,7 @@ const FormularioGeneral = () => {
                 <h1>RESIDUOS</h1>
                 <Card className="container">
                     <Input
-                        label="¿Sábes cuántos residuos produce mensualmente?"
+                        label="18.- ¿Sábes cuántos residuos produce mensualmente?"
                         type="radio"
                         name="produccion_materiales"
                         items={respuestas_13}
@@ -521,7 +524,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="Selecciona los residuos inorgánicos que se producen en la empresa"
+                        label="19.- Selecciona los residuos inorgánicos que se producen en la empresa"
                         type="checkbox"
                         name="residuos_inorganicos"
                         items={inorganicos}
@@ -533,14 +536,14 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Cuál es el principal residuo orgánico que produce la empresa?"
+                        label="20.- ¿Cuál es el principal residuo orgánico que produce la empresa?"
                         type="text"
                         name="residuo_principal"
                         onInputChange={inputHandler}
                         className="w-full" />
                 </Card>
                 <Card className="container">
-                    <Input label="¿De dónde proviene este residuo orgánico?" type="radio" name="procedencia_organico" items={procedencia_organicos} onRadioChange={radioHandler} className="w-1/2" />
+                    <Input label="21.- ¿De dónde proviene este residuo orgánico?" type="radio" name="procedencia_organico" items={procedencia_organicos} onRadioChange={radioHandler} className="w-1/2" />
                     {(procedencia_organico === 'otro_residuo_organico' || diffprocedenciaorganico === false) && (
                         <div className="flex flex-row items-end gap-5 w-1/2">
                             <Input type="text" label="" name="procedencia_organico" placeholder="ingresa la procedenia del residuo" onInputChange={inputHandler} className="w-full" />
@@ -549,7 +552,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Este residuo, u otro que produzca la empresa, genera un problema?"
+                        label="22.- ¿Este residuo, u otro que produzca la empresa, genera un problema?"
                         type="radio"
                         name="organico_problematico"
                         items={organicos_problematicos}
@@ -563,7 +566,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Qué tipo de problema te da tu residuo?"
+                        label="23.- ¿Qué tipo de problema te da tu residuo?"
                         type="checkbox"
                         name="tipo_problema_residuo"
                         items={tipos_problemas}
@@ -575,7 +578,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿Este residuo, u otro que produzca la empresa, genera un problema?"
+                        label="24.- ¿Este residuo, u otro que produzca la empresa, genera un problema?"
                         type="radio"
                         name="accion_residuo_problematico"
                         items={acciones_residuo_problematico}
@@ -589,7 +592,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="Si es que la empresa le paga a un tercero para que se lleve este residuo, ¿Cuánto se destina mensualmente a éste item?"
+                        label="25.- Si es que la empresa le paga a un tercero para que se lleve este residuo, ¿Cuánto se destina mensualmente a éste item?"
                         type="radio"
                         name="gasto_residuo_problematico"
                         items={gastos_residuos_problematicos}
@@ -606,7 +609,7 @@ const FormularioGeneral = () => {
                 <h1>POTENCIAL DE USO DE LOS RESIDUOS</h1>
                 <Card className="container">
                     <Input
-                        label="¿Del principal residuo, la empresa conoce las características de éste? (ej: humedad, composición, etc.)"
+                        label="26.- ¿Del principal residuo, la empresa conoce las características de éste? (ej: humedad, composición, etc.)"
                         type="radio"
                         name="características_residuo"
                         items={respuestas_14}
@@ -615,7 +618,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="¿La empresa hace revalorización con lo residuos?"
+                        label="27.- ¿La empresa hace revalorización con lo residuos?"
                         type="radio"
                         name="revalorizacion"
                         items={respuestas_15}
@@ -624,7 +627,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="En caso que no se esté valorizando los residuos, ¿sabe la empresa que puede hacer con ellos?"
+                        label="28.- En caso que no se esté valorizando los residuos, ¿sabe la empresa que puede hacer con ellos?"
                         type="radio"
                         name="sabe_que_hacer"
                         items={respuestas_16}
@@ -633,7 +636,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="Si es que la empresa quiere implementar acciones de revalorización de el (los) residuo(s) y aún no lo ha hecho, ¿por qué ha sido?"
+                        label="29.- Si es que la empresa quiere implementar acciones de revalorización de el (los) residuo(s) y aún no lo ha hecho, ¿por qué ha sido?"
                         type="checkbox"
                         name="por_que_no_implementa"
                         items={no_implementa_acciones}
@@ -643,9 +646,9 @@ const FormularioGeneral = () => {
                         <Input type="text" label="" name="por_que_no_implementa" placeholder="agrega otra razón" onInputChange={selectOptionsTipoProblemaHandler} className="w-full" />
                     </div>
                 </Card>
-                <Card className="container">
+                {/*<Card className="container">
                     <Input
-                        label="Si te dijéramos que el residuo puede ser una fuente complementaria de ingresos para la empresa, ¿te interesaría evaluar qué se puede hacer con ellos?"
+                        label="30.- Si te dijéramos que el residuo puede ser una fuente complementaria de ingresos para la empresa, ¿te interesaría evaluar qué se puede hacer con ellos?"
                         type="radio"
                         name="interesa_evaluacion"
                         items={interesa_evaluaciones}
@@ -668,7 +671,7 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="Si te hiciéramos contacto con un servicio integral de gestión de residuos, con el cual puedes mojorar el desempeño económico, ambiental y social de la empresa, ¿te interesaría conocerlo?"
+                        label="31.- Si te hiciéramos contacto con un servicio integral de gestión de residuos, con el cual puedes mojorar el desempeño económico, ambiental y social de la empresa, ¿te interesaría conocerlo?"
                         type="radio"
                         name="interesado"
                         items={respuestas_17}
@@ -677,14 +680,18 @@ const FormularioGeneral = () => {
                 </Card>
                 <Card className="container">
                     <Input
-                        label="Específicamente, ¿qué necesitas que este servicio hiciera en tu empresa?"
+                        label="32.- Específicamente, ¿qué necesitas que este servicio hiciera en tu empresa?"
                         type="radio"
                         name="dispuesto_pagar"
                         items={items_pagar}
                         onRadioChange={radioHandler}
                         className="w-full" />
-                </Card>
+                </Card>*/}
             </Card>
+            <Card className="py-5">
+                <p>lorem ipsum</p>
+            </Card>
+            <Diagnostico />
         </div>
     )
 }

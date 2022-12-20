@@ -4,7 +4,7 @@ import Preguntas from '../components/diagnostico/Preguntas'
 
 const Diagnostico = () => {
     return (
-        <div className='py-40'>
+        <div className=''>
             <Preguntas />
         </div>
     )

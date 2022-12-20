@@ -35,19 +35,19 @@ const Home2 = () => {
             </Card>
             <Card className="container py-10 flex flex-col justify-center items-center gap-5">
                 <p className="py-5 px-10 text-center">
-                    Si trabajas en el área de sostenibilidad de una empresa o quieres conocer cómo tu empresa está avanzando hacia la economía circular, te invitamos a utilizar nuestras herramientas de diagnóstico basadas en la norma internacional BSI 8001:2017 
+                    Si trabajas en el área de sostenibilidad de una empresa o quieres conocer cómo tu empresa está avanzando hacia la economía circular, te invitamos a utilizar nuestras herramientas de diagnóstico basadas en la norma internacional BSI 8001:2017
                 </p>
                 <div className="flex flex-col md:flex-row md:gap-5 justify-center items-center h-full">
-                    <Card onClick={formularioGeneralHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 h-32 w-3/4 md:w-1/2 flex justify-center items-center text-center">
+                    <Card onClick={formularioGeneralHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 h-32 w-3/4 flex justify-center items-center text-center">
                         <h1 className="text-white font-bold">DIAGNÓSTICO DE MADUREZ EN ECONOMÍA CICULAR</h1>
                     </Card>
-                    <Card onClick={simbiosisIndustrialHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 h-32 w-3/4 md:w-1/2 flex justify-center items-center text-center">
+                    {/*<Card onClick={simbiosisIndustrialHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 h-32 w-3/4 md:w-1/2 flex justify-center items-center text-center">
                         <h1 className="text-white font-bold">EVALUACIÓN EN SIMBIOSIS INDUTRIAL</h1>
-                    </Card>
+                    </Card>*/}
                 </div>
                 <p className="text-center py-5">Todos los datos que nos entregues serán confidenciales y el resultado sólo será enviado a tu casilla de correo.</p>
             </Card>
-                <p className="py-10 lg:py-20 md:px-20 text-justify">¿Te interesa saber más de lo que puede hacer tu empresa para mejorar su desempeño ambiental, social y económico? Si quieres avanzaren la sostenibilidad en tu empresa, ya sea para diseñar la hoja de ruta que los haga transitar hacia la economía circular, buscar financiamiento para implementar iniciativas o encontrar socios estratégicos, no dudes en contactarnos a <a href="mailto:contacto@asginnobiotics" className="underline font-bold">contacto@asginnobiotics.cl</a> o a <a href="mailto:contacto@lazofoods.cl" className="underline font-bold">contacto@lazofoods.cl</a></p>
+            <p className="py-10 lg:py-20 md:px-20 text-justify">¿Te interesa saber más de lo que puede hacer tu empresa para mejorar su desempeño ambiental, social y económico? Si quieres avanzaren la sostenibilidad en tu empresa, ya sea para diseñar la hoja de ruta que los haga transitar hacia la economía circular, buscar financiamiento para implementar iniciativas o encontrar socios estratégicos, no dudes en contactarnos a <a href="mailto:contacto@asginnobiotics" className="underline font-bold">contacto@asginnobiotics.cl</a> o a <a href="mailto:contacto@lazofoods.cl" className="underline font-bold">contacto@lazofoods.cl</a></p>
         </div>
     )
 }

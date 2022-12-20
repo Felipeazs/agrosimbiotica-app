@@ -1,8 +1,4 @@
-import { useLocation } from 'react-router-dom'
 import { Link, NavLink } from 'react-router-dom'
-
-//logos
-const logoWhite = require('../../assets/logo/logo.png')
 
 const Navigator = () => {
 
@@ -15,11 +11,11 @@ const Navigator = () => {
                         <img
                             src="https://res.cloudinary.com/dqm9xo01m/image/upload/v1671055667/Assets/logo2_mky4qp.png"
                             alt="logo"
-                            className="w-80"
+                            className="w-60"
                         />
                     </Link>
                 </div>
-                <ul className="invisible md:visible flex flex-row gap-5 text-xl">
+                <ul className="invisible md:visible flex flex-row gap-5 text-xl justify-center items-center">
                     <li>
                         <NavLink
                             to="/inicio"

@@ -14,6 +14,7 @@ import './App.css'
 // const BlogDetails = React.lazy(() => import('./pages/BlogDetails'))
 // const ProductoDetails = React.lazy(() => import('./pages/ProductoDetails'))
 import Home2 from './pages/Home2'
+
 const Diagnostico = React.lazy(() => import('./pages/Diagnostico'))
 const FormularioGeneral = React.lazy(() => import('./pages/FormularioGeneral'))
 
@@ -30,7 +31,6 @@ function App() {
                 .then(res => console.log(res))
                 .catch(err => console.log(err.message))
         }
-
         fetching()
     }, [])
 

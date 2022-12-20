@@ -35,7 +35,7 @@ const Input = ({ label, labels, type, name, value, option, placeholder, items, o
 
             {type === 'select' && (
                 <select
-                    className={`w-auto text-black border shadow-sm rounded p-2 focus:outline-none 
+                    className={`w-auto text-black border shadow-sm rounded p-5 focus:outline-none 
                     focus:border-primary focus:ring-1 focus:ring-violet-300 ${className}`}
                     name={name} onChange={onSelectChange}>
                     <option value="">{option}</option>
@@ -51,7 +51,7 @@ const Input = ({ label, labels, type, name, value, option, placeholder, items, o
 
             {type === 'radio' && (
                 items.map(i =>
-                    <div className="flex flex-row-reverse justify-end gap-5" key={i.id}>
+                    <div className="flex flex-row-reverse justify-end items-baseline gap-5" key={i.id}>
                         <label htmlFor={`${i.value}${name}`}>{i.nombre}</label>
                         <input type={type} id={`${i.value}${name}`} name={name} value={i.value} onChange={onRadioChange} />
                     </div>

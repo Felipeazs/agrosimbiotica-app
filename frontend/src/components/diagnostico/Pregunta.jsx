@@ -238,40 +238,35 @@ const Pregunta = ({ preguntas, respuestas, radar }) => {
 
 
     const si = preguntas.ambitos[2]
-    const ambitos = (
-        <Card key={si.id} className='container'>
-            {si.temas.map((t) => {
-                return (
-                    <Card key={t.id} className='bg-slate-200'>
-                        <p className='text-xl'>Tema: {t.tema}</p>
-                        {t.cuestiones.map((c) => {
-                            return (
-                                <Card key={c.id} className='bg-white'>
-                                    <p>{c.cuestion}</p>
-                                    {respuestas.respuestas.map((m, i) => {
-                                        return (
-                                            <div className='continer mx-2 p-2 flex flex-row gap-4'
-                                                key={c.id + i}>
-                                                <input type="radio" name={c.id}
-                                                    id={c.id + i} value={i + 1}
-                                                    className="hover:cursor-pointer"
-                                                    onChange={changeHandler} />
-                                                <label htmlFor={c.id + i}
-                                                    className="hover:cursor-pointer">
-                                                    <p>{m}</p></label>
-                                            </div>
-                                        )
-                                    })}
-                                </Card>
-                            )
-                        })}
-                    </Card>
-                )
-            })
-            }
-        </Card >)
-
-
+    const ambitos = (si.temas.map((t) => {
+        return (
+            <Card key={t.id} className=''>
+                <p className='text-xl font-bold'>Tema: {t.tema}</p>
+                {t.cuestiones.map((c) => {
+                    return (
+                        <Card key={c.id} className='bg-white'>
+                            <p className="font-bold">{c.cuestion}</p>
+                            {respuestas.respuestas.map((m, i) => {
+                                return (
+                                    <div className='continer mx-2 p-2 flex flex-row items-baseline gap-4'
+                                        key={c.id + i}>
+                                        <input type="radio" name={c.id}
+                                            id={c.id + i} value={i + 1}
+                                            className="hover:cursor-pointer"
+                                            onChange={changeHandler} />
+                                        <label htmlFor={c.id + i}
+                                            className="hover:cursor-pointer">
+                                            <p>{m}</p></label>
+                                    </div>
+                                )
+                            })}
+                        </Card>
+                    )
+                })}
+            </Card>
+        )
+    })
+    )
 
     return (
         <form onSubmit={submitHandler} className='container'>
