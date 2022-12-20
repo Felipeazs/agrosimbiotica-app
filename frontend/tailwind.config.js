@@ -44,9 +44,11 @@ module.exports = {
             },
             color: {
                 primary: 'rgba(63, 61, 86, 0.5)',
+                oficial: '#007B00',
             },
             borderColor: {
                 primary: 'rgba(63, 61, 86, 0.5)',
+                oficial: '#007B00',
             },
             backgroundColor: {
                 primary: '#000000',
