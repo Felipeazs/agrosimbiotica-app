@@ -38,7 +38,7 @@ const Home2 = () => {
                     Si trabajas en el área de sostenibilidad de una empresa o quieres conocer cómo tu empresa está avanzando hacia la economía circular, te invitamos a utilizar nuestras herramientas de diagnóstico basadas en la norma internacional BSI 8001:2017
                 </p>
                 <div className="flex flex-col md:flex-row md:gap-5 justify-center items-center h-full">
-                    <Card onClick={formularioGeneralHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 h-32 w-3/4 flex justify-center items-center text-center">
+                    <Card onClick={formularioGeneralHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 hover:border-2 hover:border-black h-32 w-3/4 flex justify-center items-center text-center">
                         <h1 className="text-white font-bold">DIAGNÓSTICO DE MADUREZ EN ECONOMÍA CICULAR</h1>
                     </Card>
                     {/*<Card onClick={simbiosisIndustrialHandler} className="bg-oficial hover:cursor-pointer hover:shadow-slate-900 h-32 w-3/4 md:w-1/2 flex justify-center items-center text-center">
