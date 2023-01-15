@@ -5,7 +5,7 @@ import Button from './UI/Button'
 import publicaciones from '../data/publicaciones.json'
 
 const Publicaciones = () => {
-    
+
     const navigate = useNavigate()
 
     return (
@@ -38,7 +38,7 @@ const Publicaciones = () => {
                             <p className="text-end text-sm italic">{p.fecha}</p>
                             <p className="text-xl">{p.titulo}</p>
                             <p className="py-4">{p.bajada}</p>
-                            
+
                             <Button
                                 title="Ver publicación"
                                 textColor="white"
@@ -53,7 +53,7 @@ const Publicaciones = () => {
                     ))}
                 </div>
             </div>
-                
+
         </div>
     )
 }

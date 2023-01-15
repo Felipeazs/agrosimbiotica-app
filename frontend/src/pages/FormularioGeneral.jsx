@@ -332,11 +332,11 @@ const FormularioGeneral = () => {
             <Card>
                 <h1>DATOS GENERALES DE LA EMPRESA</h1>
                 <Card className="container">
-                    <Input label="1.- ¿En qué región opera la empresa?" type="select" option="selecciona una región" name="region" items={options} onSelectChange={inputHandler} className="w-full" />
+                    <Input label="1.- ¿En qué región opera la empresa?" type="select" option="" name="region" items={options} onSelectChange={inputHandler} className="w-full" />
                 </Card>
                 <Card className="container flex flex-col">
                     <div className="flex flex-row items-end gap-5">
-                        <Input label="2.- ¿Cuáles son los productos principales que ofrece la empresa" placeholder="ingresa el producto" type="text" name="producto" value={producto} onInputChange={productoChangeHandler} className="w-full" />
+                        <Input label="2.- ¿Cuáles son los productos principales que ofrece la empresa" type="text" name="producto" value={producto} onInputChange={productoChangeHandler} className="w-full" />
                         <Button title="agregar" type="button" name="productos" clickHandler={productosHandler} />
                     </div>
                     <ul>
