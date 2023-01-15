@@ -414,7 +414,7 @@ const FormularioGeneral = () => {
                         label="9.- ¿La empresa ha participado de alguno de los siguientes sellos o premios?"
                         labels={[
                             "Premios Verdes (http://premiosverdes.org/es/)",
-                            "Premios Sustenta (http?//sustenta.utem.cl)",
+                            "Premios Sustenta (http://sustenta.utem.cl)",
                             "Premios Cero Basura",
                             "Empresas B",
                             "Programa Huella Chile"]}
