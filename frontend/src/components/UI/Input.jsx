@@ -60,7 +60,7 @@ const Input = ({ label, labels, type, name, value, option, placeholder, items, o
 
             {type === 'checkbox' && (
                 items.map(i =>
-                    <div className="flex flex-row-reverse justify-end items-baseline gap-5" key={i.id}>
+                    <div className="flex flex-row-reverse justify-end items-baselinet gap-5" key={i.id}>
                         <label htmlFor={`${i.value}${name}`}>{i.nombre}</label>
                         <input type={type} id={`${i.value}${name}`} name={name} value={i.value} onChange={onCheckChange} />
                     </div>
